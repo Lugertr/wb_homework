@@ -1,1 +1,85 @@
-<p>footer works!</p>
+<style>
+    :host{
+        display: flex;
+        justify-content: center;
+        background-color: #1E212C;
+        font-weight: 400;
+    }
+    .footer{
+        width: 75%;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+        margin-top: 81px;
+        margin-bottom: 60px;
+    }
+
+    h1{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    li{
+        opacity: 0.6;
+    }
+
+    input{
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        opacity: 0.6;
+        color: white;
+    }
+
+</style>
+
+<footer class="footer">
+    <div class="firstList">
+        <app-logo class="opacity" [color]="this.logoColor"></app-logo>
+        <p class="compInfo">Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. 
+            We provide relevant approaches to online learning, internships and employment in the largest companies in the country.</p>
+        <app-follow-links [color]="this.logoColor" [footer]="true"></app-follow-links>
+    </div>
+    
+    <div>
+        <h1>SITE MAP</h1>
+        <ul>
+        <li *ngFor="let links of siteMapLinks" href="">{{links.name}}</li>
+        </ul>
+    </div>
+
+    <div>
+        <h1>COURSES</h1>
+        <ul>
+            <li *ngFor="let links of coursesLinks" href="">{{links.name}}</li>
+        </ul>
+    </div>
+
+    <div>
+        <h1>CONTACT US</h1>
+        <div class="textAndSvg">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.66634 1.94759C5.11406 1.94759 4.66634 2.39531 4.66634 2.94759V13.0518C4.66634 13.604 5.11406 14.0518 5.66634 14.0518H10.333C10.8853 14.0518 11.333 13.604 11.333 13.0518V2.94759C11.333 2.39531 10.8853 1.94759 10.333 1.94759H10.2774L10.115 2.33723C10.0115 2.58564 9.76879 2.74744 9.49967 2.74744H6.49967C6.23056 2.74744 5.98783 2.58564 5.88431 2.33723L5.72193 1.94759H5.66634ZM3.33301 2.94759C3.33301 1.65893 4.37768 0.614258 5.66634 0.614258H10.333C11.6217 0.614258 12.6663 1.65893 12.6663 2.94759V13.0518C12.6663 14.3404 11.6217 15.3851 10.333 15.3851H5.66634C4.37768 15.3851 3.33301 14.3404 3.33301 13.0518V2.94759Z" fill="white"/>
+            </svg>
+            <span>(405) 555-0128</span>
+        </div>
+        <div class="textAndSvg">
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1663 10.0003V2.66699C15.1663 1.56242 14.2709 0.666992 13.1663 0.666992L2.83301 0.667002C1.72844 0.667003 0.833008 1.56243 0.833008 2.667V10.0003C0.833008 11.1049 1.72844 12.0003 2.83301 12.0003L13.1663 12.0003C14.2709 12.0003 15.1663 11.1049 15.1663 10.0003ZM13.833 4.1733V10.0003C13.833 10.3685 13.5345 10.667 13.1663 10.667L2.83301 10.667C2.46482 10.667 2.16634 10.3685 2.16634 10.0003L2.16634 4.17321L6.87512 7.37518C7.55384 7.83671 8.44564 7.83671 9.12436 7.37518L13.833 4.1733ZM13.8254 2.56607C13.7768 2.24577 13.5002 2.00032 13.1663 2.00033L2.83301 2.00034C2.49916 2.00034 2.22262 2.24573 2.17394 2.56599L7.62487 6.27261C7.85111 6.42646 8.14837 6.42646 8.37461 6.27261L13.8254 2.56607Z" fill="white"/>
+            </svg>
+                
+            <span>hello@createx.com</span>
+        </div>
+    </div>
+
+    <div>
+        <h1>SIGN UP TO OUR NEWSLETTER</h1>
+        <input type="email" placeholder="Email address">
+        <h6>*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.</h6>
+    </div>
+    
+</footer>
+<div class="copyright"></div>

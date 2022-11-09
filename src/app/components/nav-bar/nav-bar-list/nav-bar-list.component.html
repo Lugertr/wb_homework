@@ -1,0 +1,18 @@
+<style>
+    :host{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .navbarList{
+        list-style: none; 
+        cursor: pointer;
+        margin-right: 40px;
+    }
+</style>
+
+<div class="navbarList navGrayText" *ngFor="let links of linksArr">
+    {{links.name}}
+</div>
