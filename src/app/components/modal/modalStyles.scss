@@ -16,7 +16,28 @@ font-size: 14px;
 line-height: 150%;
 }
 
+.line{
+    height: 1px;
+    background-color: #E5E8ED;
+    width: calc(100% + 96px);
+}
+
+
 .linkText{
     color: #FF3F3A;
     cursor: pointer;
 }
+
+.inputDataPanel{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.btn{
+    height: 44px;
+}
+

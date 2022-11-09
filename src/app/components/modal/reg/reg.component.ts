@@ -1,4 +1,6 @@
 import { Component, OnInit,Input,Output,EventEmitter  } from '@angular/core';
+import { InputFormsInterface } from 'src/app/types/typesInputForms';
+import { signUpForm } from 'src/app/data/InputForms';
 
 @Component({
   selector: 'app-reg',
@@ -6,6 +8,8 @@ import { Component, OnInit,Input,Output,EventEmitter  } from '@angular/core';
   styleUrls: ['./reg.component.scss',"../modalStyles.scss"]
 })
 export class RegComponent implements OnInit {
+
+  inputForms: InputFormsInterface[] = signUpForm;
 
   @Input() SecondModal: boolean = false;
   @Output() SecondModalChange = new EventEmitter<boolean>();

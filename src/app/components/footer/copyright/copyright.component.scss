@@ -15,7 +15,7 @@
     opacity: 0.05;
 }
 .copyrightContent{
-    width: 75%;
+    width: 64%;
     display: flex;
     justify-content: space-between
 
@@ -35,4 +35,9 @@ h2{
     line-height: 150%;
     opacity: 0.6;
     cursor: pointer;
+}
+
+.loveSvg{
+    margin-left:4px;
+    margin-right: 4px;
 }

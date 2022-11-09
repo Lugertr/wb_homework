@@ -1,21 +1,4 @@
 <style>
-    :host{
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        padding: 48px;
-    }
-
-    h1{
-        padding-bottom: 24px;
-    }
-
-    .inputDataPanel{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    
     .forgotPanel{
         display: flex;
         flex-direction: row;
@@ -25,8 +8,7 @@
 <h1>Sign in</h1>
 <p>Sign in to your account using email and password provided during registration.</p>
 <div class="inputDataPanel">
-    <app-input></app-input>
-    <app-input></app-input>
+    <app-input *ngFor="let inputs of inputForms" [data]="inputs"></app-input>
     <div class="forgotPanel">
         <app-checkbox></app-checkbox>
         <span class="linkText">Forgot password?</span>
