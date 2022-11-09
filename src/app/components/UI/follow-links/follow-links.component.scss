@@ -9,3 +9,7 @@
 :host *{
     cursor: pointer;
 }
+
+:host *:hover, :host *:hover *{
+    fill:#FF3F3A;
+}

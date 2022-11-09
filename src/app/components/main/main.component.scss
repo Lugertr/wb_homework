@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 
 :host * {
@@ -20,10 +21,11 @@
 }
 
 .askForm{
-    width: 64.8%;
+    width: 64%;
+    height: 100%;
     margin-top: 168px;
-    margin-right: 15px;
     margin-bottom: 180px;
+    margin-right: 80px;
 }
 
 .img{
@@ -39,6 +41,6 @@
 .askImg{
     padding-top: 67px;
     padding-bottom: 66px;
-    padding-right: 105px;
+    margin-right: 105px;
 }
 

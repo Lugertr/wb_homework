@@ -1,4 +1,6 @@
 :host{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -6,7 +8,8 @@
 .askForm{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 3fr;
+    grid-template-rows: 86px 86px 172px;
+    gap:24px;
     align-items: center;
 }
 
@@ -17,6 +20,7 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
+    margin-bottom: 48px;
 }
 
 
@@ -33,9 +37,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    column-gap: 50px;
 }
 .btn{
     height: 52px;
-    width: 340px;
 }
 

@@ -4,6 +4,15 @@ p,li,h1,h6,.textAndSvg{ color:white}
 p,li,.textAndSvg {
     opacity: 0.6;
 }
+li,.textAndSvg{width: fit-content;}
+
+li:hover,.textAndSvg:hover {
+    opacity: 0.9;
+}
+
+li,.textAndSvg{
+    margin-bottom: 8px;
+}
 
 p{
     font-weight: 400;
@@ -28,7 +37,10 @@ li{
 }
 
 .textAndSvg{
+    cursor: pointer;    
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
 }
