@@ -21,6 +21,7 @@ import { LogInComponent } from './components/modal/log-in/log-in.component';
 import { RegComponent } from './components/modal/reg/reg.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { ModalLinksComponent } from './components/UI/modal-links/modal-links.component';
+import { InputPasswordComponent } from './components/UI/input/input-password/input-password.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ModalLinksComponent } from './components/UI/modal-links/modal-links.com
     RegComponent,
     ModalComponent,
     ModalLinksComponent,
+    InputPasswordComponent,
   ],
   imports: [
     BrowserModule,

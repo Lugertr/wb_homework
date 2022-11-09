@@ -1,23 +1,18 @@
 <style>
     :host{
-        display: flex;
-        flex-direction: column;
+    display: flex;
+    flex-direction: column;
     }
-
-    .input{
-        margin-top: 8px;
-        background: #FFFFFF;
-        border: 1px solid #D7DADD;
-        border-radius: 4px;
-        width: 100%;
-        height: 100%;
-        padding: 16px;
-    }
-
 </style>
+
 <label for={{data.labelName}}>{{data.labelName}}</label>
-<input class="input"
+<input *ngIf="!PasswordInput(); else pasInput" 
+    class="input"
     name={{data.labelName}} 
     type={{data.type}} 
     required={{data.required}}
     placeholder={{data.placeholder}}>
+
+<ng-template #pasInput>
+    <app-input-password [data]="data"></app-input-password>
+</ng-template>
