@@ -15,6 +15,7 @@
 
 </style>
 
-    <app-nav-bar class="navArea"></app-nav-bar>
+    <app-nav-bar class="navArea" [(modalVisKostil)]="modalVis"></app-nav-bar>
     <app-main class="mainArea"></app-main>
     <app-footer class="footerArea"></app-footer>
+    <app-modal *ngIf="modalVis" [(modalVisKostil)]="modalVis"></app-modal>

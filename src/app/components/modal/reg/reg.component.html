@@ -1,0 +1,45 @@
+<style>
+    :host{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 48px;
+    }
+
+    h1{
+        padding-bottom: 24px;
+    }
+
+    .inputDataPanel{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .forgotPanel{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .line{
+        position: relative;
+        width: 100%;
+        height: 2px;
+        border: black solid 3px;
+    }
+</style>
+
+<h1>Sign up</h1>
+<p>Registration takes less than a minute but gives you full control over your studying.</p>
+<div class="inputDataPanel">
+    <app-input></app-input>
+    <app-input></app-input>
+    <div class="rememberMe">
+        <app-checkbox></app-checkbox>
+    </div>
+</div>
+<button class="btn">Sign Up</button>
+<span>Already have an account?<span class="linkText" (click)="onChangeSecondModal($event,false)">Sign in</span></span>
+<div class="line"></div>
+<p>Or sign in with</p>
+<app-modal-links></app-modal-links>

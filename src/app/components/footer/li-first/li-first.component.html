@@ -1,0 +1,24 @@
+<style>
+    .firstList{
+    display: flex;
+    flex-direction: column;
+    }
+
+.companyInfo{
+    margin-top: 25px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    width: 90%;
+}
+
+.linksGap{column-gap:25px}
+
+</style>
+
+<div class="firstList">
+    <app-logo [color]="this.logoColor"></app-logo>
+    <p class="companyInfo">Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. 
+        We provide relevant approaches to online learning, internships and employment in the largest companies in the country.</p>
+    <app-follow-links [color]="this.logoColor" [footer]="true" class="linksGap"></app-follow-links>
+</div>

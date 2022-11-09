@@ -1,5 +1,5 @@
 :host{
-    padding: 124px;
+    padding-top: 124px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -11,21 +11,34 @@
 }
 
 .contactForm, .askForm{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
 }
 
 .contactForm{
     width: 64%;
 }
 
-.img{
-    width: 100%;
-    height: 100%;
+.askForm{
+    width: 64.8%;
+    margin-top: 168px;
+    margin-right: 15px;
+    margin-bottom: 180px;
 }
 
-h1{
-    font-weight: 900;
-    font-size: 46px;
-    line-height: 130%;
+.img{
+    object-fit: cover;
 }
+
+.map{
+    margin-top: 32px;
+    width: 705px;
+    height: 412px;
+}
+
+.askImg{
+    padding-top: 67px;
+    padding-bottom: 66px;
+    padding-right: 105px;
+}
+

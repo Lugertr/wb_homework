@@ -1,75 +1,34 @@
-.firstList{
-    display: flex;
-    flex-direction: column;
+
+p,li,h1,h6,.textAndSvg{ color:white}
+
+p,li,.textAndSvg {
+    opacity: 0.6;
 }
 
-.compInfo{
-    margin-top: 25px;
+p{
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
-    width: 90%;
 }
 
+h1{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}   
 
-
+li{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    list-style-type: none;
+    cursor: pointer;
+}
 
 .textAndSvg{
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.copyright{
-    background: #FFFFFF;
-    opacity: 0.05;
-}
-
-h1{
-    color: #FFFFFF;
-    font-weight: 700;
-font-size: 16px;
-line-height: 150%;
-}   
-
-li{
-    font-family: 'Lato';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 160%;
-/* identical to box height, or 26px */
-
-display: flex;
-align-items: center;
-flex: none;
-order: 0;
-flex-grow: 0;
-
-/* white */
-
-color: #FFFFFF;
-}
-
-p{
-    width: 279px;
-height: 90px;
-left: 345px;
-top: 126px;
-
-/* extrasmall/regular */
-
-font-family: 'Lato';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 150%;
-/* or 18px */
-
-
-/* white */
-
-color: #FFFFFF;
-
-opacity: 0.6;
 }

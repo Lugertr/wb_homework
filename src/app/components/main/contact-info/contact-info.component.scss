@@ -7,9 +7,22 @@
 .contactAdressForm{
     display: flex;
     flex-direction: row;
+    margin-top: 24px;
 }
 
 .contactAdressFormData{
     display: flex;
     flex-direction: column;
+    margin-left: 13px;
 }
+
+.h2top{
+    margin-bottom: 8px;
+}
+
+.h2bottom{
+    margin-top: 48px;
+    margin-bottom: 27px;
+}
+
+.linksGap{column-gap:33px}

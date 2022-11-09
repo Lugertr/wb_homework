@@ -1,7 +1,9 @@
 <style>
     :host{
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         background-color: #1E212C;
         font-weight: 400;
     }
@@ -13,37 +15,12 @@
         margin-bottom: 60px;
     }
 
-    h1{
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin-bottom: 12px;
-    }
-
-    li{
-        opacity: 0.6;
-    }
-
-    input{
-        background: rgba(255, 255, 255, 0.12);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 4px;
-        opacity: 0.6;
-        color: white;
-    }
-
 </style>
 
 <footer class="footer">
-    <div class="firstList">
-        <app-logo class="opacity" [color]="this.logoColor"></app-logo>
-        <p class="compInfo">Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. 
-            We provide relevant approaches to online learning, internships and employment in the largest companies in the country.</p>
-        <app-follow-links [color]="this.logoColor" [footer]="true"></app-follow-links>
-    </div>
-    
+
+    <app-li-first></app-li-first>
+
     <div>
         <h1>SITE MAP</h1>
         <ul>
@@ -74,12 +51,7 @@
             <span>hello@createx.com</span>
         </div>
     </div>
+    <app-li-last></app-li-last>
 
-    <div>
-        <h1>SIGN UP TO OUR NEWSLETTER</h1>
-        <input type="email" placeholder="Email address">
-        <h6>*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.</h6>
-    </div>
-    
 </footer>
-<div class="copyright"></div>
+<app-copyright>

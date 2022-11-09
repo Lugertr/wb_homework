@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,6 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class NavBarComponent implements OnInit {
 
   logoColor: 'black' = 'black';
+
+  @Input() modalVisKostil: boolean = false;
+  @Output() modalVisKostilChange = new EventEmitter<boolean>();
+
+  onChangemodalVis(state: boolean) {
+    this.modalVisKostil = state;
+    this.modalVisKostilChange.emit(state)
+  }
+
   constructor() { }
 
   ngOnInit(): void {
