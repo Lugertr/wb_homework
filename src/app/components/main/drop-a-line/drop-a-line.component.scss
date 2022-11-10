@@ -42,7 +42,8 @@
 .sendForm{
     display: flex;
     flex-direction: row;
-    align-items: center
+    align-items: center;
+    column-gap: 25px;
 }
 
 .agreeChekbox{
@@ -51,7 +52,6 @@
 }
 
 .btn{
-    margin-left: 50px;
     height: 52px;
 }
 
