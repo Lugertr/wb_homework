@@ -1,3 +1,5 @@
+@import "../../styles/_var.scss";
+
 :host{
     padding-top: 124px;
     display: flex;
@@ -18,11 +20,11 @@
 }
 
 .contactForm{
-    width: 64%;
+    width: $structureWidth;
 }
 
 .askForm{
-    width: 64%;
+    width: $structureWidth;
     height: 100%;
     margin-top: 168px;
     margin-bottom: 180px;

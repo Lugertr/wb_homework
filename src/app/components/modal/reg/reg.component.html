@@ -3,15 +3,18 @@
     .rememberMe{
         display: flex;
         flex-direction: row;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
     }
 </style>
-
+<div class="cross"></div>
 <h1>Sign up</h1>
-<p>Registration takes less than a minute but gives you full control over your studying.</p>
+<p>Registration takes less than a minute but gives you full control<br>over your studying.</p>
 <div class="inputDataPanel">
     <app-input *ngFor="let inputs of inputForms" [data]="inputs"></app-input>
     <div class="rememberMe">
-        <app-checkbox></app-checkbox>
+        <app-checkbox [data]="checkboxData"></app-checkbox>
     </div>
 </div>
 <button class="btn">Sign Up</button>

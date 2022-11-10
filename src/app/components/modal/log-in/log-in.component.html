@@ -2,15 +2,18 @@
     .forgotPanel{
         display: flex;
         flex-direction: row;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
     }
 </style>
-
+<div class="cross"></div>
 <h1>Sign in</h1>
-<p>Sign in to your account using email and password provided during registration.</p>
+<p>Sign in to your account using email and password provided<br>during registration.</p>
 <div class="inputDataPanel">
     <app-input *ngFor="let inputs of inputForms" [data]="inputs"></app-input>
     <div class="forgotPanel">
-        <app-checkbox></app-checkbox>
+        <app-checkbox [data]="checkboxData"></app-checkbox>
         <span class="linkText">Forgot password?</span>
     </div>
 </div>

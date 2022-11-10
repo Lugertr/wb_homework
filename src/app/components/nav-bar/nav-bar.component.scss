@@ -1,3 +1,5 @@
+@import "../../styles/_var.scss";
+
 :host {
     margin-top: 20px;
     width: 100%;
@@ -7,7 +9,7 @@
 }
 
 .navbar{
-    width: 64%;
+    width: $structureWidth;
     display: grid;
     justify-content: center;
     align-items: center;

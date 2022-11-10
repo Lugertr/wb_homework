@@ -2,6 +2,7 @@ p{
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
+    text-align: center;
 }
 
 h1{
@@ -14,6 +15,7 @@ span{
     font-weight: 400;
 font-size: 14px;
 line-height: 150%;
+align-self:flex-start
 }
 
 .line{
@@ -25,7 +27,9 @@ line-height: 150%;
 
 .linkText{
     color: #FF3F3A;
-    cursor: pointer;
+    cursor: pointer; 
+    width: 100%;  
+    text-align: right;
 }
 
 .inputDataPanel{
@@ -41,3 +45,34 @@ line-height: 150%;
     height: 44px;
 }
 
+
+.cross {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    opacity: 0.3;
+    top: 28px;
+    right: 28px;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.cross:hover {
+    opacity: 1;
+  }
+  .cross:before, .cross:after {
+    position: absolute;
+    left: 7px;
+    top: -2px;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: #333;
+  }
+  .cross:before {
+    transform: rotate(45deg);
+  }
+  .cross:after {
+    transform: rotate(-45deg);
+  }
+  

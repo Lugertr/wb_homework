@@ -1,5 +1,5 @@
 import { Component, OnInit,Input,Output,EventEmitter  } from '@angular/core';
-import { InputFormsInterface } from 'src/app/types/typesInputForms';
+import { InputFormsInterface,ChekboxFormsInterface } from 'src/app/types/typesInputForms';
 import { signUpForm } from 'src/app/data/InputForms';
 
 @Component({
@@ -10,6 +10,12 @@ import { signUpForm } from 'src/app/data/InputForms';
 export class RegComponent implements OnInit {
 
   inputForms: InputFormsInterface[] = signUpForm;
+
+  checkboxData: ChekboxFormsInterface = {
+    labelName: "Remember me",
+    type:"checkbox",
+    required:true,
+  }
 
   @Input() SecondModal: boolean = false;
   @Output() SecondModalChange = new EventEmitter<boolean>();

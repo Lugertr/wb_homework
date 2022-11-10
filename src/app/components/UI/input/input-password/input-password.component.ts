@@ -22,8 +22,8 @@ export class InputPasswordComponent implements OnInit {
   setPasswordShow():string {
     this.passwordShow = !this.passwordShow;
     if (this.passwordShow)
-      return 'text'
-    return 'password'
+      return 'password'
+    return 'text'
   }
 
   constructor() { }

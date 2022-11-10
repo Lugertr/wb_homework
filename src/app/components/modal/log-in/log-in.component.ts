@@ -1,6 +1,6 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 
-import { InputFormsInterface } from 'src/app/types/typesInputForms';
+import { InputFormsInterface,ChekboxFormsInterface } from 'src/app/types/typesInputForms';
 import { signInForm } from 'src/app/data/InputForms';
 
 @Component({
@@ -11,6 +11,12 @@ import { signInForm } from 'src/app/data/InputForms';
 export class LogInComponent implements OnInit {
 
   inputForms: InputFormsInterface[] = signInForm;
+
+  checkboxData: ChekboxFormsInterface = {
+    labelName: "Keep me signed in",
+    type:"checkbox",
+    required:true,
+  }
 
   @Input() SecondModal: boolean = false;
   @Output() SecondModalChange = new EventEmitter<boolean>();

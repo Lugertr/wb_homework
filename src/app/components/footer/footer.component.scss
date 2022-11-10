@@ -1,3 +1,14 @@
+@import "../../styles/_var.scss";
+
+.footer{
+    width: $structureWidth;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+    margin-top: 81px;
+    margin-bottom: 60px;
+    column-gap: 80px;
+}
+
 
 p,li,h1,h6,.textAndSvg{ color:white}
 
