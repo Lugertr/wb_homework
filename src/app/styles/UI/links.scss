@@ -1,0 +1,42 @@
+.white{background-color: white}
+
+.gray{background-color: #787A80;}
+
+@mixin changeColor() { 
+    min-height: 23px;
+    min-width: 24px;
+    height: 100%;
+    cursor: pointer;
+    &:hover{background-color: #FF3F3A;}}
+
+:host{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .facebook{
+        @include changeColor();
+        mask: url('../../../assets/social_network_logo/Facebook.svg') no-repeat center;
+    }
+    .inst{
+        @include changeColor();
+        mask: url('../../../assets/social_network_logo/Instagram.svg') no-repeat center;
+    }
+    .linked{
+        @include changeColor();
+        mask: url('../../../assets/social_network_logo/Linked-In.svg') no-repeat center;
+    }
+    .telegram{
+        @include changeColor();
+        mask: url('../../../assets/social_network_logo/telegram.svg') no-repeat center;
+    }
+    .twitter{
+        @include changeColor();
+        mask: url('../../../assets/social_network_logo/Twitter.svg') no-repeat center;
+    }
+    .youtube{
+        @include changeColor();
+        mask: url('../../../assets/social_network_logo/YouTube.svg') no-repeat center;
+    }
+}
+

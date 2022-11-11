@@ -1,9 +1,14 @@
 import { Component, OnInit,Input,Output, EventEmitter,HostListener } from '@angular/core';
 
+import { ChekboxFormsInterface } from 'src/app/types/typesInputForms';
+import { InputFormsInterface } from 'src/app/types/typesInputForms';
+
+import { signInForm,signUpForm } from 'src/app/data/InputForms';
+
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss']
+  styleUrls: ['../../styles/modal.scss']
 })
 
 
@@ -11,13 +16,13 @@ export class ModalComponent implements OnInit {
 
   regModal: boolean = false;
 
-  @Input() modalVisKostil: boolean = false;
-  @Output() modalVisKostilChange = new EventEmitter<boolean>();
+  @Input() modalVis: boolean = false;
+  @Output() modalVisChange = new EventEmitter<boolean>();
 
   onChangemodalVis(state: boolean) {
-    this.modalVisKostil = state;
+    this.modalVis = state;
     this.regModal = false;
-    this.modalVisKostilChange.emit(state)
+    this.modalVisChange.emit(state)
   }
 
   @HostListener('click', ['$event.target'])
@@ -25,8 +30,21 @@ export class ModalComponent implements OnInit {
     this.onChangemodalVis(false)
   }
 
-  modalPanel(e:MouseEvent) {
+  ClickOnDialog(e:MouseEvent) {
     e.stopPropagation();
+  }
+
+  loginForm: InputFormsInterface[] = signInForm;
+  regForm: InputFormsInterface[] = signUpForm;
+
+  checkboxData: ChekboxFormsInterface = {
+    labelName: "Keep me signed in",
+    type:"checkbox",
+    required:true,
+  }
+
+  dialogFormChange() {
+    this.modalVis = !this.modalVis;
   }
 
   constructor() { }

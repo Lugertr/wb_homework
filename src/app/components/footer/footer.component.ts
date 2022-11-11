@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { LinksInterface } from 'src/app/types/typesUI';
 import { siteMap,courses } from 'src/app/data/linksNames';
 
+import { social_networks_links } from 'src/app/data/linksNames';
+
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss',]
+  styleUrls: ['../../styles/footer.scss',]
 })
 export class FooterComponent implements OnInit {
 
-  logoColor: 'white' = "white"
-
+  social_networks: LinksInterface[] = social_networks_links;
   siteMapLinks: LinksInterface[] = siteMap;
   coursesLinks: LinksInterface[] = courses;
 

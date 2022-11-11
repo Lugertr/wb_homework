@@ -1,0 +1,36 @@
+.map{
+    margin-top: 32px;
+    width: 705px;
+    height: 412px;
+}
+
+.contactsInfo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contactAdressForm{
+    display: flex;
+    flex-direction: row;
+    margin-top: 24px;
+    font-weight: 700;
+}
+    
+.contactAdressFormData{
+    display: flex;
+    flex-direction: column;
+    margin-left: 13px;
+    cursor: pointer;
+}
+
+.h2bottom{
+    margin-top: 48px;
+    margin-bottom: 27px;
+}
+
+.links{ 
+    min-height: 24px;
+    column-gap: 33px;}

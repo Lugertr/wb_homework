@@ -15,3 +15,11 @@ export const courses: LinksInterface[] = [
     {name:"Design",link: null},
     {name:"Development",link: null},
 ]
+
+export const social_networks_links: LinksInterface[] = [
+    {name:"facebook",link: null},
+    {name:"inst",link: null},
+    {name:"linked",link: null},
+    {name:"twitter",link: null},
+    {name:"youtube",link: null},
+]

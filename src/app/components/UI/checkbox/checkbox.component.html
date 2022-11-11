@@ -1,36 +1,6 @@
-<style>
-    :host{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 100%;
-    }
+<input class="checkbox"
+id={{data.labelName}} 
+type={{data.type}} 
+required={{data.required}}>
+<label for={{data.labelName}}>{{data.labelName}}</label>
 
-    .input{
-        margin-top: 5px;
-        background: #FFFFFF;
-        border: 1px solid #D7DADD;
-        border-radius: 4px;
-        border: 1px solid #FF3F3A;
-        border-radius: 3px;
-        cursor: pointer;
-    }
-    
-    .input:checked{
-        accent-color: #FF3F3A;
-    }
-    
-    label{
-        cursor: pointer;
-        margin-left: 12px;
-        color: #424551;
-    }
-</style>
-<input class="input"
-    id={{data.labelName}} 
-    type={{data.type}} 
-    required={{data.required}}>
-<label for={{data.labelName}}>{{data.labelName}}
-    
-</label>
