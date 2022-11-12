@@ -13,6 +13,18 @@
     width: fit-content;
 }
 
+.link{mask-size: cover;}
+
+.chat_img{mask: url('./assets/contacts_img/Chat.svg') no-repeat center;}
+.phone_img{mask: url('./assets/contacts_img/iPhone.svg') no-repeat center;}
+.mail_img{mask: url('./assets/contacts_img/Mail.svg') no-repeat center;}
+.outline_img{mask: url('./assets/contacts_img/outline.svg') no-repeat center;}
+
+.person_img{mask: url('./assets/Person.svg') no-repeat center;}
+
+.copyright_love_img{mask: url('./assets/copyright_heart.svg') no-repeat center;}
+
+
 .btn{
     display: flex;
     flex-direction: column;

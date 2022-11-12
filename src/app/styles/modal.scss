@@ -85,6 +85,11 @@ align-self:flex-start
     text-align: right;
 }
 
+.links_soc{
+    min-height: 18px;
+    column-gap: 18px;
+}
+
 .inputDataPanel{
     display: flex;
     flex-direction: column;

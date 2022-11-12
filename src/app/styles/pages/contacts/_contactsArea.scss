@@ -1,7 +1,9 @@
 .map{
+    width: 100%;
+    height:auto;
     margin-top: 32px;
-    width: 705px;
-    height: 412px;
+    //min-width: 705px;
+    //min-height: 412px;
 }
 
 .contactsInfo{
@@ -25,6 +27,8 @@
     margin-left: 13px;
     cursor: pointer;
 }
+
+.link{background-color: #FF3F3A;min-width: 22px; min-height: 14px;}
 
 .h2bottom{
     margin-top: 48px;

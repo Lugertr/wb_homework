@@ -2,8 +2,10 @@ import { Component, OnInit,Input,Output, EventEmitter,HostListener } from '@angu
 
 import { ChekboxFormsInterface } from 'src/app/types/typesInputForms';
 import { InputFormsInterface } from 'src/app/types/typesInputForms';
+import { LinksInterface } from 'src/app/types/typesUI';
 
 import { signInForm,signUpForm } from 'src/app/data/InputForms';
+import { modal_social_links } from 'src/app/data/linksNames';
 
 @Component({
   selector: 'app-modal',
@@ -15,6 +17,8 @@ import { signInForm,signUpForm } from 'src/app/data/InputForms';
 export class ModalComponent implements OnInit {
 
   regModal: boolean = false;
+  
+  social_links:LinksInterface[] = modal_social_links;
 
   @Input() modalVis: boolean = false;
   @Output() modalVisChange = new EventEmitter<boolean>();

@@ -10,7 +10,6 @@ import { FollowLinksComponent } from './components/UI/follow-links/follow-links.
 import { InputComponent } from './components/UI/input/input.component';
 import { CheckboxComponent } from './components/UI/checkbox/checkbox.component';
 import { ModalComponent } from './components/modal/modal.component';
-import { ModalLinksComponent } from './components/UI/modal-links/modal-links.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { ModalLinksComponent } from './components/UI/modal-links/modal-links.com
     InputComponent,
     CheckboxComponent,
     ModalComponent,
-    ModalLinksComponent,
   ],
   imports: [
     BrowserModule,

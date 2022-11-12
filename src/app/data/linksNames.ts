@@ -23,3 +23,10 @@ export const social_networks_links: LinksInterface[] = [
     {name:"twitter",link: null},
     {name:"youtube",link: null},
 ]
+
+export const modal_social_links: LinksInterface[] = [
+    {name:"facebook",link: null},
+    {name:"google",link: null},
+    {name:"twitter",link: null},
+    {name:"linked",link: null},
+]

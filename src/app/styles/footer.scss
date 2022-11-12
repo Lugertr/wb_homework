@@ -1,5 +1,39 @@
 @import "./var";
 
+p,li,h1,h2,h6,.textAndSvg,span{ color:white}
+
+p,li,h2,.textAndSvg {opacity: 0.6;}
+
+li:hover,.textAndSvg:hover {opacity: 0.9;}
+
+li,.textAndSvg{
+    width: fit-content;}
+
+span {line-height: 160%;}
+
+li,.textAndSvg{
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+p,h6,.copyrightContent span{
+    font-weight: 400;
+    line-height: 150%;
+}
+
+p,.copyrightContent span{ font-size: 12px;}
+
+h6{ margin-top: 12px;
+    font-size:10px}
+
+h1{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}   
+
 :host{
     display: flex;
     flex-direction: column;
@@ -26,37 +60,6 @@
     list-style-type: none;
 }
 
-
-p,li,h1,h6,.textAndSvg{ color:white}
-
-p,li,.textAndSvg {
-    opacity: 0.6;
-}
-li,.textAndSvg{width: fit-content;}
-
-li:hover,.textAndSvg:hover {
-    opacity: 0.9;
-}
-
-li,.textAndSvg{
-    margin-bottom: 8px;
-}
-
-p{
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 150%;
-}
-
-h1{
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 150%;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}   
-
-
 .textAndSvg{
     cursor: pointer;    
     display: flex;
@@ -64,9 +67,9 @@ h1{
     align-items: center;
     justify-content: flex-start;
     column-gap: 10px;
-    font-size: 16px;
-    line-height: 160%;
 }
+
+.link{min-height: 21px; min-width: 17px; background-color: white;}
 
 //li first
 
@@ -74,9 +77,6 @@ h1{
 .companyInfo{
     margin-top: 25px;
     margin-bottom: 40px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 150%;
 }
 
 .footerLinks{
@@ -85,18 +85,6 @@ h1{
     opacity: 0.6;
 }
 
-
-//li last
-
-h1{
-    width: 100%;
-}
-h6{
-    margin-top: 12px;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 150%;
-}
 
 .inputField{
     position: relative;
@@ -145,24 +133,14 @@ input{
     opacity: 0.05;
 }
 
+.copyright_left{display:flex}
 
-span,h2{color: white;}
-
-span{
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 150%;
-}
-
-h2{
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 150%;
-    opacity: 0.6;
-    cursor: pointer;
-}
-
-.loveSvg{
+.copyright_love_img{
+    background-color: #FF3F3A;
+    min-width: 14px;
+    min-height: 16px;
     margin-left:4px;
     margin-right: 4px;
 }
+
+h2{cursor: pointer;}

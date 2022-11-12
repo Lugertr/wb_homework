@@ -1,5 +1,17 @@
 @import "./_var";
 
+li,.logArea{
+    color: #424551;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    cursor: pointer;}
+
+    .navListEl:hover,.link:hover,span:hover{
+        color:#FF3F3A;
+    }
+    
+
 :host{
     margin-top: 20px;
     width: $structureWidth;
@@ -7,10 +19,6 @@
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 3fr 2fr;
-}
-
-:host *{
-    color: #424551;
 }
 
 
@@ -23,14 +31,6 @@
     column-gap: 40px;
 }
 
-.navListEl{
-    cursor: pointer;
-    font-weight: 700;
-}
-
-.navListEl:hover{
-    color:#FF3F3A;
-}
 
 .cta{
     width: 100%;
@@ -39,7 +39,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
 }
 
 .btn{       
@@ -47,7 +46,6 @@
 }
 
 .logArea{
-    font-weight: 700;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -59,7 +57,9 @@
         margin-left: 10px;
     }
 
-    span:hover{
-        color:#FF3F3A;
+    .link{
+        background: #424551;
+        min-width: 18px;
+        min-height: 17px;
     }
 }

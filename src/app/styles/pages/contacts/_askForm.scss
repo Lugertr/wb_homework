@@ -2,6 +2,13 @@
     padding-top: 67px;
     padding-bottom: 66px;
     margin-right: 105px;
+    font-size: 200px;
+    text-align: center;
+}
+
+.askInputArea,.sendForm{
+    font-weight: 400;
+    line-height: 160%;
 }
 
 .askForm{
@@ -51,11 +58,5 @@
     column-gap: 25px;
 }
 
-.agreeChekbox{
-    font-weight: 400;
-    line-height: 160%;
-}
-
-.btn{
-    height: 52px;
+.btn{height: 52px;
 }
