@@ -1,0 +1,75 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].rules[0].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].rules[0].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[6].rules[1].use[0]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[6].rules[1].use[1]!./src/styles.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato";
+  font-style: normal;
+  font-size: 16px;
+}
+.logo {
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.link {
+  -webkit-mask-size: cover;
+          mask-size: cover;
+}
+.chat_img {
+  -webkit-mask: url('Chat.svg') no-repeat center;
+          mask: url('Chat.svg') no-repeat center;
+}
+.phone_img {
+  -webkit-mask: url('iPhone.svg') no-repeat center;
+          mask: url('iPhone.svg') no-repeat center;
+}
+.mail_img {
+  -webkit-mask: url('Mail.svg') no-repeat center;
+          mask: url('Mail.svg') no-repeat center;
+}
+.outline_img {
+  -webkit-mask: url('outline.svg') no-repeat center;
+          mask: url('outline.svg') no-repeat center;
+}
+.person_img {
+  -webkit-mask: url('Person.svg') no-repeat center;
+          mask: url('Person.svg') no-repeat center;
+}
+.copyright_love_img {
+  -webkit-mask: url('copyright_heart.svg') no-repeat center;
+          mask: url('copyright_heart.svg') no-repeat center;
+}
+.eye {
+  -webkit-mask: url('Eye.svg') no-repeat center;
+          mask: url('Eye.svg') no-repeat center;
+}
+.arrow {
+  -webkit-mask: url('Arrow.svg') no-repeat center;
+          mask: url('Arrow.svg') no-repeat center;
+}
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 40px;
+  gap: 10px;
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.btn:hover {
+  background: white;
+  color: #F75E05;
+  border: 2px solid #F75E05;
+}
+
+/*# sourceMappingURL=styles.css.map*/
