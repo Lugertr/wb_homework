@@ -6,10 +6,10 @@
 h1,h2,span,label {color: #1E212C;}
 
 
-h2,label{font-weight: 700;}
-label,span,h2{line-height: 150%;}
+h2,.contact_label{font-weight: 700;}
+.contact_label,span,h2{line-height: 150%;}
 
-label{font-size: 14px;}
+.contact_label{font-size: 14px;}
 
 span{font-weight: 400;
     font-size: 18px;}

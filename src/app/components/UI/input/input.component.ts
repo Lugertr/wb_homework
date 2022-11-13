@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef} from '@angular/core';
 
 import { InputFormsInterface } from 'src/app/types/typesInputForms';
 
@@ -10,13 +10,19 @@ import { InputFormsInterface } from 'src/app/types/typesInputForms';
 
 
 export class InputComponent implements OnInit {
-  
+
+
   @Input() data: InputFormsInterface = 
-    { labelName: 'empty',
-      type:"text",
-      placeholder: "emptyField",
-      required:false
-    }
+  { labelName: 'empty',
+    type:"text",
+    placeholder: "emptyField",
+    required:false
+  }
+
+  inputType: string = 'text';
+
+  constructor(private cd: ChangeDetectorRef) {}
+  
 
     PasswordInput(): boolean {
       if (this.data.type === 'password')
@@ -25,16 +31,15 @@ export class InputComponent implements OnInit {
     }
 
     changeType(): void{
-      if (this.data.type == "text")
-        this.data.type = "password"
-      else
-        this.data.type = "text"
+      if (this.inputType=='text') 
+        this.inputType = "password"
+      else this.inputType = "text"
+      this.cd.detectChanges(); 
     } 
 
 
-  constructor() { }
-
   ngOnInit(): void {
+    this.inputType= (this.data.type==='password') ? "password":this.data.type;
   }
 
 }

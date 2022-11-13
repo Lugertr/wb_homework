@@ -15,15 +15,19 @@
         padding: 16px;
     }
 
-.password{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    .pasBtn{
-        position: absolute;
-        cursor: pointer;
-        right: 17px;
-        top: -32px;
+    .input_password_btn{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        .eye{
+            background-color: #424551;
+            width: 17px;
+            height: 17px;
+            position: absolute;
+            cursor: pointer;
+            right: 17px;
+            top: -34px;
         }
-    }
+    } 
+
 

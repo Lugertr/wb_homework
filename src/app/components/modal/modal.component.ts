@@ -48,7 +48,7 @@ export class ModalComponent implements OnInit {
   }
 
   dialogFormChange() {
-    this.modalVis = !this.modalVis;
+    this.regModal  = !this.regModal;
   }
 
   constructor() { }
