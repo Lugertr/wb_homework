@@ -1,1 +1,3 @@
-<div *ngFor="let links of linksArr" ngClass="{{links.name}} {{color}}"></div>
+<ng-container *ngFor="let links of linksArr;let i = index" >
+    <div ngClass="{{links.name}} {{color}}" *ngIf="i<10"></div>
+  </ng-container>
