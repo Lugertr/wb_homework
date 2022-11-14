@@ -13,9 +13,21 @@ export class FollowLinksComponent implements OnInit {
 
   constructor() {console.log(this.linksArr) }
 
+  setLogo(logo:string) {
+    switch(logo) {
+        case 'google': return 'google';
+        case 'youtube': return 'youtube';
+        case 'twitter': return 'twitter';
+        case 'linked': return 'linked';
+        case 'inst': return 'inst';
+        default: return 'facebook';
+    }
+
+  }
 
 
   ngOnInit(): void {
+
   }
 
 }
