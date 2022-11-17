@@ -100,3 +100,14 @@ p{
         color: #FF3F3A;
     }
 }
+
+mat-icon{
+    width: 13px;
+    height: 16px;
+    font-size: 16px;
+    margin-right: 4px;
+}
+
+.reverse{
+    transform: scale(-1, 1)
+}

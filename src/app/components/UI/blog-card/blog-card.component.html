@@ -1,6 +1,14 @@
 <mat-card class="card">
         <div class="badge">
-            <mat-icon>mic_none</mat-icon>
+            <div *ngIf="data.type==='Podcast'; then micIcon else articleIcon"></div>
+            <ng-template #micIcon>
+                <mat-icon class="material-icons-outlined reverse">keyboard_voice</mat-icon>
+            </ng-template>
+            <ng-template #articleIcon>
+                <mat-icon class="material-icons-outlined reverse">description</mat-icon>
+            </ng-template>
+
+
             <span>{{data.type}}</span>
         </div>
         <img class="img" colorful mat-card-image src={{imgPath}} alt={{data.title}}>

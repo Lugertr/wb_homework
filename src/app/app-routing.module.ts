@@ -22,7 +22,7 @@ const SignRoute: Routes = [
 const appRoutes: Routes =[
   { path: 'contacts', component: ContactsComponent ,
   children: SignRoute},
-  { path: 'blog', component: BlogComponent,
+  { path: 'single-post', component: BlogComponent,
   children: SignRoute},
  // { path: 'contacts', component: SignModalComponent,
  // children: SignRoute},

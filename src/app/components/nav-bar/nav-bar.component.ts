@@ -25,7 +25,7 @@ export class NavBarComponent  {
     {name:"About Us",link: '/'},
     {name:"Courses",link: '/'},
     {name:"Events",link: '/'},
-    {name:"Blog",link: '/blog'},
+    {name:"Blog",link: '/single-post'},
     {name:"Contracts",link: '/contacts'},
   ];
 

@@ -3,6 +3,7 @@
 
 //шрифты
 
+
 h3{ //Жирный текст в блогах
     font-weight: 700;
     font-size: 20px;
@@ -80,6 +81,7 @@ span{
 }
 
 .tag{
+    color: #787A80;
     padding: 5.5px 16px;
     border: 1px solid #D7DADD;
     border-radius: 4px
@@ -89,4 +91,8 @@ span{
     color: white;
     background-color: #FF3F3A;
     cursor: pointer;
+}
+
+.reverse{
+    transform: scale(-1, 1)
 }
