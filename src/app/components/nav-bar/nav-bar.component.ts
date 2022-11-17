@@ -1,4 +1,5 @@
-import { Component, OnInit,Input,Output,EventEmitter} from '@angular/core';
+import { Component, Input,Output,EventEmitter} from '@angular/core';
+import {Router} from '@angular/router';
 
 import { LinksInterface } from 'src/app/types/typesUI';
 
@@ -7,29 +8,26 @@ import { LinksInterface } from 'src/app/types/typesUI';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['../../styles/nav.scss']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent  {
 
-  logoColor: 'black' = 'black';
 
   @Input() modalVisKostil: boolean = false;
   @Output() modalVisKostilChange = new EventEmitter<boolean>();
 
-  onChangemodalVis(state: boolean) {
-    this.modalVisKostil = state;
-    this.modalVisKostilChange.emit(state)
+  constructor(private readonly router: Router) { }
+
+  openModal()  {
+    this.router.navigate([this.router.url,{outlets:{modal:['sign_in']}}]);
   }
+
 
   linksArr: LinksInterface[] = [
-    {name:"About Us",link: null},
-    {name:"Courses",link: null},
-    {name:"Events",link: null},
-    {name:"Blog",link: null},
-    {name:"Contracts",link: null},
+    {name:"About Us",link: '/'},
+    {name:"Courses",link: '/'},
+    {name:"Events",link: '/'},
+    {name:"Blog",link: '/blog'},
+    {name:"Contracts",link: '/contacts'},
   ];
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

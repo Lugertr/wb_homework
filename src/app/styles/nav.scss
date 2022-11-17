@@ -1,13 +1,13 @@
 @import "./_var";
 
-li,.logArea{
+.navList,.logArea{
     color: #424551;
     font-weight: 700;
     font-size: 16px;
     line-height: 160%;
     cursor: pointer;}
 
-    .navListEl:hover,.link:hover,span:hover{
+    .link:hover,span:hover{
         color:#FF3F3A;
     }
     
@@ -29,6 +29,14 @@ li,.logArea{
     justify-content: flex-start;
     list-style-type: none;
     column-gap: 40px;
+    margin-right: 40px;
+
+    &_el{
+        text-decoration: none;
+    }
+    &_el:hover, .active{
+        color:#FF3F3A;
+    }
 }
 
 
@@ -46,6 +54,7 @@ li,.logArea{
 }
 
 .logArea{
+    margin-left: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;

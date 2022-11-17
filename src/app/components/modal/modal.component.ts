@@ -20,7 +20,7 @@ export class ModalComponent implements OnInit {
   
   social_links:LinksInterface[] = modal_social_links;
 
-  @Input() modalVis: boolean = false;
+  @Input() modalVis: boolean = true;
   @Output() modalVisChange = new EventEmitter<boolean>();
 
   onChangemodalVis(state: boolean) {

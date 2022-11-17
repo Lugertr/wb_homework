@@ -11,7 +11,7 @@ export class FollowLinksComponent implements OnInit {
   @Input() color: "white" | "gray" = 'gray';
   @Input() linksArr: LinksInterface[] = [];
 
-  constructor() {console.log(this.linksArr) }
+  constructor() { }
 
   setLogo(logo:string) {
     switch(logo) {

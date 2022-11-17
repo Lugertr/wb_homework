@@ -1,4 +1,5 @@
     <app-nav-bar class="navArea" [(modalVisKostil)]="modalVis"></app-nav-bar>
-    <app-main class="mainArea"></app-main>
+    <!-- <app-main class="mainArea"></app-main> -->
+    <router-outlet class="main"></router-outlet>
     <app-footer class="footerArea"></app-footer>
-    <app-modal *ngIf="modalVis" [(modalVis)]="modalVis"></app-modal>
+    
