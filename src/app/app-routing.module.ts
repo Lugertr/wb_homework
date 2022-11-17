@@ -44,7 +44,7 @@ class CustomUrlSerializer extends DefaultUrlSerializer {
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes, { useHash: true })],
+  imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule],
   providers: [
     { provide: UrlSerializer, useClass: CustomUrlSerializer }
