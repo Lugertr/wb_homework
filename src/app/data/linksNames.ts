@@ -30,3 +30,16 @@ export const modal_social_links: LinksInterface[] = [
     {name:"twitter",link: null},
     {name:"linked",link: null},
 ]
+
+
+export const blogArticle_social_links: LinksInterface[] = [
+    {name:"facebook",link: null},
+    {name:"twitter",link: null},
+    {name:"linked",link: null},
+]
+
+export const blogArticle_author_links: LinksInterface[] = [
+    {name:"inst",link: null},
+    {name:"twitter",link: null},
+    {name:"linked",link: null},
+]

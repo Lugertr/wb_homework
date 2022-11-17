@@ -12,7 +12,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FollowLinksComponent } from './components/UI/follow-links/follow-links.component';
 import { InputComponent } from './components/UI/input/input.component';
 import { CheckboxComponent } from './components/UI/checkbox/checkbox.component';
-import { ModalComponent } from './components/modal/modal.component';
 import { BlogComponent } from './components/pages/blog/blog.component';
 import { SignModalComponent,DialogSignIn,DialogSignUp } from './components/sign-modal/sign-modal.component';
 import { BlogCardComponent } from './components/UI/blog-card/blog-card.component';
@@ -28,13 +27,12 @@ import { BlogCardComponent } from './components/UI/blog-card/blog-card.component
     FollowLinksComponent,
     InputComponent,
     CheckboxComponent,
-    ModalComponent,
     BlogComponent,
     SignModalComponent,
     DialogSignIn,
     DialogSignUp,
     BlogCardComponent,
-    
+
     ColorfulDirective 
   ],
   imports: [

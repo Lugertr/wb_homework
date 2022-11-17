@@ -13,12 +13,19 @@ export class BlogCardComponent implements OnInit {
     theme: 'Empty', date: "None", time: 'None',
     title: "None",
     text: "None",
-    type: 'podcast'
-  };
+    type: 'Podcast',
+  }
+  @Input() dataIndex: number = 0;
 
-  constructor() {}
+  imgPath: string = `assets/blog/blogs_data_assets/Image${this.dataIndex}.png`;
+  linkName: string = (this.data.type==='Podcast') ? 'Listen': 'Read';
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+    this.imgPath = `assets/blog/blogs_data_assets/Image${this.dataIndex}.png`
+    this.linkName = (this.data.type==='Podcast') ? 'Listen': 'Read';
   }
 
 }

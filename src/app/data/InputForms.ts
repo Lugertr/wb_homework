@@ -21,3 +21,4 @@ export const signUpForm: InputFormsInterface[] = [
     { labelName: 'Password',type:"password",placeholder: "************",required:true,},
     { labelName: 'Confirm Password',type:"password",placeholder: "************",required:true,},
 ] 
+

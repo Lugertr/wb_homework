@@ -1,22 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ChekboxFormsInterface } from 'src/app/types/typesInputForms';
+import { BlogDataInterface,blogCards } from 'src/app/data/blogsData';
+
+import { LinksInterface } from 'src/app/types/typesUI';
+import { blogArticle_social_links,blogArticle_author_links } from 'src/app/data/linksNames';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['../../../styles/pages/blog/blog.scss']
+  styleUrls: ['../../../styles/pages/blog/blog.scss',]
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
-
-
+  cards: BlogDataInterface[] = blogCards;
   SubscribeCheckboxData: ChekboxFormsInterface = {
     labelName: "I agree to receive communications from Createx Online School",
     type:"checkbox",
     required:true,
   }
+
+  article_links: LinksInterface[] = blogArticle_social_links;
+  author_links: LinksInterface[] = blogArticle_author_links;
+
+  constructor() { console.log(this.cards)}
+
 
 
   ngOnInit(): void {

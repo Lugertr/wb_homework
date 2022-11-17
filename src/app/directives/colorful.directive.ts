@@ -6,6 +6,7 @@ import {Directive, ElementRef, Renderer2,HostListener} from '@angular/core';
 export class ColorfulDirective{
 
     constructor(private elementRef: ElementRef, private renderer: Renderer2){
+        this.renderer.setStyle(this.elementRef.nativeElement, "transition", "500ms filter linear, 500ms -webkit-filter linear");
         this.setGrayscale()
     }
 
@@ -19,7 +20,7 @@ export class ColorfulDirective{
 
     setGrayscale() {
         console.log('test')
-        this.renderer.setStyle(this.elementRef.nativeElement, "filter", "grayscale(100%)");
+        this.renderer.setStyle(this.elementRef.nativeElement, "filter", "grayscale(100%) blur(1px)");
     }
 
     deleteGrayscale() { 
