@@ -1,0 +1,51 @@
+@import "../../../styles/var";
+@import "../_pagesStyle";
+
+@import "./contactsStyles/askForm";
+@import "./contactsStyles/contactsArea";
+
+//шрифты
+
+.contact_label{font-weight: 700;}
+.contact_label{line-height: 150%;}
+
+.contact_label{font-size: 14px;}
+
+a{
+    line-height: 150%;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    &:hover{
+        color: #FF3F3A;
+    }
+}
+
+//
+:host{
+    padding-top: 124px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.h2top{margin-bottom: 8px;}
+
+.contactsArea, .askArea {
+    width: $structureWidth;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.askArea{
+    display: flex;
+    flex-direction: row;
+    margin-top: 168px;
+    margin-bottom: 180px;
+}
+

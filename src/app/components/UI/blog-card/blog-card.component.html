@@ -2,16 +2,15 @@
         <div class="badge">
             <div *ngIf="data.type==='Podcast'; then micIcon else articleIcon"></div>
             <ng-template #micIcon>
-                <mat-icon class="material-icons-outlined reverse">keyboard_voice</mat-icon>
+                <mat-icon class="icon_logo material-icons-outlined" svgIcon="mic"></mat-icon>
+                
             </ng-template>
             <ng-template #articleIcon>
-                <mat-icon class="material-icons-outlined reverse">description</mat-icon>
+                <mat-icon class="icon_logo material-icons-outlined reverse">description</mat-icon>
             </ng-template>
-
-
             <span>{{data.type}}</span>
         </div>
-        <img class="img" colorful mat-card-image src={{imgPath}} alt={{data.title}}>
+        <img class="img" colorful mat-card-image [src]="imgPath" [alt]="data.title">
     <mat-card-content class="content">
 
             <div class="meta">
@@ -30,7 +29,7 @@
         <p>{{data.text}}</p>
 
         <mat-card-actions class="link">
-            <span>{{linkName}}</span>
+            <h2>{{linkName}}</h2>
             <mat-icon class="link_arrow">arrow_right_alt</mat-icon>
         </mat-card-actions>
 

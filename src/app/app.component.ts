@@ -1,4 +1,5 @@
-import { Component,Output, EventEmitter } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { CustomIconService } from './services/custom-icon.service';
 
 
 @Component({
@@ -6,11 +7,12 @@ import { Component,Output, EventEmitter } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit  {
   title = 'my-app';
-  modalVis: boolean = false;
 
+  constructor(private CustomIconService: CustomIconService) {}
 
+  ngOnInit() {}
 }
 
 

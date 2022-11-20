@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ContactsComponent } from './components/pages/contacts/contacts.component';
 import { BlogComponent } from './components/pages/blog/blog.component';
-import { SignModalComponent, DialogSignUp } from './components/sign-modal/sign-modal.component';
+import { SignModalComponent } from './components/sign-modal/sign-modal.component';
 import { DefaultUrlSerializer,UrlSerializer, UrlTree } from '@angular/router';
 
 const SignRoute: Routes = [

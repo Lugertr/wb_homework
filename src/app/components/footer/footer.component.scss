@@ -1,0 +1,157 @@
+@import "../../styles/var";
+
+p,li,h1,h2,h6,.textAndSvg,a,span{ color:white}
+
+p,li,h2,.textAndSvg {opacity: 0.6;}
+
+li:hover,.textAndSvg:hover {opacity: 0.9;}
+
+li,.textAndSvg{
+    width: fit-content;}
+
+a {
+    text-decoration: none;
+    line-height: 160%;
+}
+
+li,.textAndSvg{
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+p,h6,.copyrightContent a{
+    font-weight: 400;
+    line-height: 150%;
+}
+
+p,.copyrightContent, span{ font-size: 12px;}
+
+h6{ margin-top: 12px;
+    font-size:10px}
+
+h1{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}   
+
+:host{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1E212C;
+    font-weight: 400;
+    width: 100%;
+}
+
+.footer{
+    width: $structureWidth;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+    margin-top: 81px;
+    margin-bottom: 60px;
+    column-gap: 80px;
+}
+
+.footerList{
+    display: flex;
+    flex-direction: column;
+}
+
+.listEl{
+    list-style-type: none;
+}
+
+.textAndSvg{
+    cursor: pointer;    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
+}
+
+.link{
+    font-size: 14px;
+    height: 17px; 
+    width: 15px; 
+    color: white;}
+
+//li first
+
+
+.companyInfo{
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.footerLinks{
+    color: #FFFFFF;
+    column-gap: 25px;
+    min-height: 18px;
+    opacity: 0.6;
+}
+
+
+.inputField{
+    position: relative;
+}
+
+.footer_input{
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    opacity: 0.6;
+    color: white;
+    margin-top: 12px;
+    padding: 9px 32px 9px 12px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.input_arrow{
+    color:  #FFFFFF;;
+    position: absolute;
+    top: 22px;
+    right: 14px;
+    font-size: 17px;
+    width: 14px;
+    cursor: pointer;
+}
+
+
+//copywrite
+
+.copyrightContent{
+    height: 58px;
+    width: $structureWidth;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyrightContent::before{
+    content: '';
+    height: 58px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background: #FFFFFF;
+    opacity: 0.05;
+}
+
+.copyright_left{
+    display:flex;
+    align-items: center}
+
+.copyright_love_img{
+    color: #FF3F3A;
+    width: 14px;
+    height: 16px;
+    margin-left:4px;
+    margin-right: 4px;
+}
+
+h2{cursor: pointer;}

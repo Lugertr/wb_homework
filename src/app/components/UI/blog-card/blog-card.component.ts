@@ -17,8 +17,8 @@ export class BlogCardComponent implements OnInit {
   }
   @Input() dataIndex: number = 0;
 
-  imgPath: string = `assets/blog/blogs_data_assets/Image${this.dataIndex}.png`;
-  linkName: string = (this.data.type==='Podcast') ? 'Listen': 'Read';
+  imgPath!: string;
+  linkName!: string;
 
   constructor() {
   }

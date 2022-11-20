@@ -5,7 +5,7 @@ import { InputFormsInterface } from 'src/app/types/typesInputForms';
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
-  styleUrls: ['../../../styles/UI/Input.scss'],
+  styleUrls: ['./Input.component.scss'],
 })
 
 
@@ -19,27 +19,17 @@ export class InputComponent implements OnInit {
     required:false
   }
 
-  inputType: string = 'text';
+  inputType = 'text';
 
   constructor(private cd: ChangeDetectorRef) {}
   
-
-    PasswordInput(): boolean {
-      if (this.data.type === 'password')
-        return true
-      return false
-    }
-
     changeType(): void{
-      if (this.inputType=='text') 
-        this.inputType = "password"
-      else this.inputType = "text"
+      this.inputType = (this.inputType=='text') ? "password": "text";
       this.cd.detectChanges(); 
     } 
 
-
   ngOnInit(): void {
-    this.inputType= (this.data.type==='password') ? "password":this.data.type;
+    this.inputType = (this.data.type==='password') ? "password":this.data.type;
   }
 
 }

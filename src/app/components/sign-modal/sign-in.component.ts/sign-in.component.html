@@ -1,0 +1,21 @@
+<div class="dialog" >
+    <div class="cross" (click)="close()"></div>
+
+    <form class="form">
+        <h1>Sign in</h1>
+        <p>Sign in to your account using email and password provided<br>during registration.</p>
+        <div class="inputDataPanel">
+            <app-input *ngFor="let inputs of loginForm" [data]="inputs"></app-input>
+            <div class="checkboxModal">
+                <app-checkbox [data]="checkboxData"></app-checkbox>
+                <span class="linkText">Forgot password?</span>
+            </div>
+        </div>
+            <button class="btn">Sign In</button>
+            <span>Don't have an account? <span class="linkText" (click)="switch()">Sign up</span></span>
+    </form>
+    <div class="line"></div>
+    <p>Or sign in with</p>
+    <app-follow-links class="links_soc" [linksArr]=" social_links"></app-follow-links>
+</div>
+

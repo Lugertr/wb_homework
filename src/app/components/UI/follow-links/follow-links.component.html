@@ -1,4 +1,4 @@
 <ng-container *ngFor="let links of linksArr;let i = index" >
-    <div ngClass="{{setLogo(links.name)}} {{color}}" *ngIf="i<10"></div>
+    <mat-icon class="soc_link" [svgIcon]="setLogo(links.name)" *ngIf="i<10"></mat-icon>
 </ng-container>
 

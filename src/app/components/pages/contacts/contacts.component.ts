@@ -10,7 +10,7 @@ declare var ymaps:any;
 @Component({
   selector: 'app-main',
   templateUrl: './contacts.component.html',
-  styleUrls: ['../../../styles/pages/contacts/contacts.scss']
+  styleUrls: ['./contacts.component.scss']
 })
 export class ContactsComponent implements OnInit {
 
@@ -30,7 +30,7 @@ export class ContactsComponent implements OnInit {
 
   ngOnInit() {
 
-    ymaps.ready(function () {
+    ymaps.ready(function (): void {
       var myMap = new ymaps.Map('map', {
               center: [55.67233260, 37.70533794],
               zoom: 15

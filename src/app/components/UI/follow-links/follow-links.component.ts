@@ -4,16 +4,15 @@ import { LinksInterface } from 'src/app/types/typesUI';
 @Component({
   selector: 'app-follow-links',
   templateUrl: './follow-links.component.html',
-  styleUrls: ['../../../styles/UI/links.scss']
+  styleUrls: ['./follow-links.component.scss']
 })
 export class FollowLinksComponent implements OnInit {
 
-  @Input() color: "white" | "gray" = 'gray';
   @Input() linksArr: LinksInterface[] = [];
 
   constructor() { }
 
-  setLogo(logo:string) {
+  setLogo(logo:string): string {
     switch(logo) {
         case 'google': return 'google';
         case 'youtube': return 'youtube';
@@ -26,8 +25,6 @@ export class FollowLinksComponent implements OnInit {
   }
 
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
 }

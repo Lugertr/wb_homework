@@ -13,3 +13,13 @@ export interface ChekboxFormsInterface{
     type:ChekboxType,
     required:boolean,
 }
+
+export enum social_links{
+    facebook = "facebook",
+    google = "google",
+    twitter = "twitter",
+    youtube = "youtube",
+    inst = "inst",
+    linked = "linked",
+    telegram = "telegram"
+}

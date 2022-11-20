@@ -1,45 +1,45 @@
 import { LinksInterface } from "../types/typesUI";
 
 export const siteMap: LinksInterface[] = [
-    {name:"About Us",link: null},
-    {name:"Courses",link: null},
-    {name:"Events",link: null},
-    {name:"Blog",link: null},
-    {name:"Contracts",link: null},
+    {name:"About Us",link: ''},
+    {name:"Courses",link: ''},
+    {name:"Events",link: ''},
+    {name:"Blog",link: ''},
+    {name:"Contracts",link: ''},
 ]
 
 export const courses: LinksInterface[] = [
-    {name:"Marketing",link: null},
-    {name:"Management",link: null},
-    {name:"HR & Recruting",link: null},
-    {name:"Design",link: null},
-    {name:"Development",link: null},
+    {name:"Marketing",link: ''},
+    {name:"Management",link: ''},
+    {name:"HR & Recruting",link: ''},
+    {name:"Design",link: ''},
+    {name:"Development",link: ''},
 ]
 
 export const social_networks_links: LinksInterface[] = [
-    {name:"facebook",link: null},
-    {name:"inst",link: null},
-    {name:"linked",link: null},
-    {name:"twitter",link: null},
-    {name:"youtube",link: null},
+    {name:"facebook",link: ''},
+    {name:"inst",link: ''},
+    {name:"linked",link: ''},
+    {name:"twitter",link: ''},
+    {name:"youtube",link: ''},
 ]
 
 export const modal_social_links: LinksInterface[] = [
-    {name:"facebook",link: null},
-    {name:"google",link: null},
-    {name:"twitter",link: null},
-    {name:"linked",link: null},
+    {name:"facebook",link: ''},
+    {name:"google",link: ''},
+    {name:"twitter",link: ''},
+    {name:"linked",link: ''},
 ]
 
 
 export const blogArticle_social_links: LinksInterface[] = [
-    {name:"facebook",link: null},
-    {name:"twitter",link: null},
-    {name:"linked",link: null},
+    {name:"facebook",link: ''},
+    {name:"twitter",link: ''},
+    {name:"linked",link: ''},
 ]
 
 export const blogArticle_author_links: LinksInterface[] = [
-    {name:"inst",link: null},
-    {name:"twitter",link: null},
-    {name:"linked",link: null},
+    {name:"inst",link: ''},
+    {name:"twitter",link: ''},
+    {name:"linked",link: ''},
 ]

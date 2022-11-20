@@ -3,7 +3,7 @@
     <div class="footerList">
         <img src="assets/logo/Logo_white.svg" class="logo" alt="Createx">
         <p class="companyInfo">Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country.</p>
-        <app-follow-links class="footerLinks" [linksArr]="social_networks" [color]="'white'"></app-follow-links>
+        <app-follow-links class="footerLinks" [linksArr]="social_networks"></app-follow-links>
     </div>
 
     <div class="footerList">
@@ -23,20 +23,20 @@
     <div class="footerList">
         <h1>CONTACT US</h1>
         <div class="textAndSvg">
-            <div class="link phone_img"></div> 
-            <span>(405) 555-0128</span>
+            <mat-icon class="link" svgIcon="iphone"></mat-icon>
+            <a href="tel:+4055550128">(405) 555-0128</a>
         </div>
         <div class="textAndSvg">
-            <div class="link mail_img"></div> 
-            <span>hello@createx.com</span>
+            <mat-icon class="link" svgIcon="mail"></mat-icon>
+            <a href="mailto:hello@createx.com">hello@createx.com</a>
         </div>
     </div>
 
     <form class="footerList">
         <h1>SIGN UP TO OUR NEWSLETTER</h1>
         <div class="inputField">
-            <input type="email" placeholder="Email address">
-            <div class="arrow"></div>
+            <input class="footer_input" type="email" placeholder="Email address">
+            <mat-icon class="input_arrow">arrow_right_alt</mat-icon>
         </div>
         <h6>*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.</h6>
     </form>
@@ -46,7 +46,7 @@
     <div class="copyright_left">
         <span>© All rights reserved. </span>
         <span>Made with</span>
-        <div class="copyright_love_img"></div>
+        <mat-icon class="copyright_love_img" svgIcon="heart"></mat-icon>
         <span>by Createx Studio</span>
     </div>
     <h2>GO TO TOP</h2>

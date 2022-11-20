@@ -1,0 +1,19 @@
+@mixin changeColor() { 
+    min-height: 23px;
+    min-width: 24px;
+    height: 100%;
+    cursor: pointer;
+    color:inherit;
+    &:hover{color: #FF3F3A;}}
+
+:host{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .soc_link{
+        @include changeColor();
+
+    }
+}
+

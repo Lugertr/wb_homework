@@ -9,12 +9,12 @@ import { blogArticle_social_links,blogArticle_author_links } from 'src/app/data/
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['../../../styles/pages/blog/blog.scss',]
+  styleUrls: ['./blog.component.scss',]
 })
 export class BlogComponent implements OnInit {
 
   cards: BlogDataInterface[] = blogCards;
-  SubscribeCheckboxData: ChekboxFormsInterface = {
+  subscribeCheckboxData: ChekboxFormsInterface = {
     labelName: "I agree to receive communications from Createx Online School",
     type:"checkbox",
     required:true,
@@ -23,7 +23,7 @@ export class BlogComponent implements OnInit {
   article_links: LinksInterface[] = blogArticle_social_links;
   author_links: LinksInterface[] = blogArticle_author_links;
 
-  constructor() { console.log(this.cards)}
+  constructor() {}
 
 
 

@@ -1,0 +1,75 @@
+@import "../../styles/var";
+
+.navList,.logArea{
+    color: #424551;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;}
+
+    .link:hover,span:hover{
+        color:#FF3F3A;
+    }
+    
+
+:host{
+    margin-top: 20px;
+    width: $structureWidth;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 3fr 2fr;
+}
+
+
+.navList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    list-style-type: none;
+    column-gap: 40px;
+    margin-right: 40px;
+
+    &_el{
+        cursor: pointer;
+        text-decoration: none;
+    }
+    &_el:hover, .active{
+        color:#FF3F3A;
+    }
+}
+
+
+.cta{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{       
+    min-height: 52px;
+}
+
+.logArea{
+    margin-left: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-end;
+    width: 100%;
+    cursor: pointer;
+
+    span{
+        margin-left: 10px;
+    }
+
+    .link{
+        color: #424551;
+        font-size: 15px;
+        width: 18px;
+        height: 18px;
+    }
+}
