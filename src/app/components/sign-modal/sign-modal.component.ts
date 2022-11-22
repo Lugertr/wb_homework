@@ -28,7 +28,7 @@ export class SignModalComponent {
       :this.dialog.open(DialogSignUp)
 
     dialogRef.afterClosed().subscribe((result) => {
-        if (result)
+        if (!result)
           this.router.navigate(['../'], { relativeTo: this.route });
         else if (this.type)
           this.router.navigate(['../sign_up'], { relativeTo: this.route });

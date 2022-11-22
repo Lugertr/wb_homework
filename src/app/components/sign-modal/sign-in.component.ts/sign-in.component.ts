@@ -31,10 +31,10 @@ import { modal_social_links } from 'src/app/data/linksNames';
     }
   
     close(): void {
-      this.dialogRef.close(true);
+      this.dialogRef.close(false);
     }
     switch(): void {
-      this.dialogRef.close(false);
+      this.dialogRef.close(true);
     }
   
   }

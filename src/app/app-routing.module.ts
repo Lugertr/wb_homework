@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ContactsComponent } from './components/pages/contacts/contacts.component';
 import { BlogComponent } from './components/pages/blog/blog.component';
+import { GraphsComponent } from './components/pages/graphs/graphs.component';
 import { SignModalComponent } from './components/sign-modal/sign-modal.component';
 import { DefaultUrlSerializer,UrlSerializer, UrlTree } from '@angular/router';
 
@@ -16,13 +17,15 @@ const SignRoute: Routes = [
     path: 'sign_up',
     component: SignModalComponent,
     outlet:'modal'
-  }
+  },
 ]
 
 const appRoutes: Routes =[
   { path: 'contacts', component: ContactsComponent ,
   children: SignRoute},
   { path: 'single-post', component: BlogComponent,
+  children: SignRoute},
+  { path: 'graphs', component: GraphsComponent,
   children: SignRoute},
  // { path: 'contacts', component: SignModalComponent,
  // children: SignRoute},

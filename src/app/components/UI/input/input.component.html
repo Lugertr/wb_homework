@@ -1,7 +1,7 @@
     <label [for]="data.labelName">{{data.labelName}}</label>
     <input 
         class="input"
-        [ngClass]="{'input_password':(data.type==='password')}"
+        [class.input_password]="(data.type==='password')"
         [name]="data.labelName"
         [type]="inputType"
         [required]="data.required"

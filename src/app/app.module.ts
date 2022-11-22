@@ -19,7 +19,8 @@ import { SignModalComponent } from './components/sign-modal/sign-modal.component
 import { DialogSignIn } from './components/sign-modal/sign-in.component.ts/sign-in.component';
 import { DialogSignUp } from './components/sign-modal/sign-up.component/sign-up.component';
 import { BlogCardComponent } from './components/UI/blog-card/blog-card.component';
-
+import { GraphsComponent } from './components/pages/graphs/graphs.component';
+import { GraphComponent } from './components/pages/graphs/graph/graph.component';
 
 
 @NgModule({
@@ -36,8 +37,10 @@ import { BlogCardComponent } from './components/UI/blog-card/blog-card.component
     DialogSignIn,
     DialogSignUp,
     BlogCardComponent,
+    GraphsComponent,
+    GraphComponent,
 
-    ColorfulDirective 
+    ColorfulDirective,
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,12 @@
-import { Component,OnInit} from '@angular/core';
-import {MatDialog,MatDialogRef} from '@angular/material/dialog';
-import {ActivatedRoute, Router} from '@angular/router';
+import { Component} from '@angular/core';
+import {MatDialogRef} from '@angular/material/dialog';
+import { Router} from '@angular/router';
 
 import { ChekboxFormsInterface } from 'src/app/types/typesInputForms';
 import { InputFormsInterface } from 'src/app/types/typesInputForms';
 import { LinksInterface } from 'src/app/types/typesUI';
 
-import { signInForm,signUpForm } from 'src/app/data/InputForms';
+import { signUpForm } from 'src/app/data/InputForms';
 import { modal_social_links } from 'src/app/data/linksNames';
 
 
@@ -30,10 +30,10 @@ import { modal_social_links } from 'src/app/data/linksNames';
     }
   
     close(): void {
-      this.dialogRef.close(true);
+      this.dialogRef.close(false);
     }
     switch(): void {
-      this.dialogRef.close(false);
+      this.dialogRef.close(true);
     }
   
   }

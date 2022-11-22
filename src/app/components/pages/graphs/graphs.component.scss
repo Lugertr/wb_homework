@@ -1,0 +1,37 @@
+:host(.page){
+    width: 100%;
+    height: 100%;
+    flex: 1;
+
+
+}
+
+
+.graphsField{
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+    display: grid;
+    grid-template-columns: repeat(4,800px);
+    gap:100px;
+    overflow-x: scroll;
+}
+
+.graphs{
+    position: relative;
+}
+
+
+.graph{height: 400px;}
+
+.fullsize_btn{
+    cursor: pointer;
+    position: absolute;
+    right:0px;
+    top: 0;
+}
+
+.final{
+    height: 800px;
+    margin: 100px;
+}

@@ -1,0 +1,11 @@
+<div class="graphsField">
+    <div class="graphs" *ngFor="let graph of GraphsArr; let i = index">
+        <mat-icon class="fullsize_btn" (click)="fullSizeOpen(i)">zoom_in</mat-icon>
+        <app-graph [graphData]="graph"></app-graph>
+    </div>
+</div>
+
+<div>
+    <canvas #canvas class="graph final"></canvas>
+</div>
+<router-outlet name="modal"></router-outlet>

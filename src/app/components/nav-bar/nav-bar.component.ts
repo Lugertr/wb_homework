@@ -22,6 +22,7 @@ export class NavBarComponent  {
     {name:"Events",link: '/'},
     {name:"Blog",link: '/single-post'},
     {name:"Contracts",link: '/contacts'},
+    {name:"Graphs", link: './graphs'}
   ];
 
 
