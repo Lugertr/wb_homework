@@ -18,16 +18,16 @@ import { GraphDataInterface, ChartDataInterface } from 'src/app/types/jsonDataTy
 
 export class GraphsComponent implements OnInit {
 
-  GraphsArr: GraphDataInterface[] = [];
+  graphsArr: GraphDataInterface[] = [];
   @ViewChild('canvas') ctx?:ElementRef<HTMLCanvasElement>;
 
 
   constructor(private jsonToArrConvertService: jsonToArrConvertService,
     public dialog: MatDialog) {}
 
-  ngOnInit(){
+  ngOnInit(): void{
       this.jsonToArrConvertService.readFile()
-      .then(()=>this.GraphsArr = [...this.jsonToArrConvertService.getData()])
+      .then(()=>this.graphsArr = [...this.jsonToArrConvertService.getData()])
       .then(()=>this.createLastGraph())
   }
 
@@ -36,7 +36,7 @@ export class GraphsComponent implements OnInit {
         width: '90%',
         height: '90%',
       })
-      dialogRef.componentInstance.graphData = this.GraphsArr[ind];
+      dialogRef.componentInstance.graphData = this.graphsArr[ind];
   }
 
   createLastGraph():void {
@@ -44,38 +44,41 @@ export class GraphsComponent implements OnInit {
       const chartData: ChartDataInterface[] = [];
       
       //Находим все даты:
-      const allDateArr: Set<string> = new Set(...this.GraphsArr.map((el)=>el.data_arr));
+      const allDateArr: Set<string> = new Set(...this.graphsArr.map((el)=>el.data_arr));
 
-      //формируем datasets проходя во всех объектах по всем датам
-      for (let graphData of this.GraphsArr) {
-        const sumArr: number[] = []
-        for (let date of allDateArr) {
+      const sumArr: number[] = [];
+      for (let date of allDateArr) {
+        let sum: number = 0;
+        for (let graphData of this.graphsArr) {
           const dateInd = graphData.data_arr.indexOf(date);
-          const sum = (!~dateInd) ? 0:
+          sum +=(!~dateInd) ? 0:
           graphData.orders[dateInd] + graphData.new[dateInd] + graphData.deliver[dateInd] + graphData.returns[dateInd];
-          sumArr.push(sum)
         }
-        chartData.push({
-            label: graphData.name,
-            data: sumArr,
-            borderWidth: 1
-        })
+        sumArr.push(sum);
       }
+
+      chartData.push({
+        label: "Суммарная статистика по всем офисам",
+        data: sumArr,
+        borderWidth: 1
+    })
       
       new Chart( this.ctx.nativeElement, {
           type: 'line',
-          options: {
-              plugins: {
-                  title: {
-                      display: true,
-                      text: 'Все офисы'
-                  }
-              }
-          },
           data: {
               labels: Array.from(allDateArr),
               datasets: chartData
-          }
+          },
+          options: {
+            scales: {
+                x: {
+                    ticks: {
+                        maxRotation: 45,
+                        minRotation: 45
+                    }
+                }
+            }
+        }
       });
   }
   }
