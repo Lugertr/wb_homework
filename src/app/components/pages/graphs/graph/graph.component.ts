@@ -21,6 +21,10 @@ export class GraphComponent implements AfterViewInit {
     };
 
     ngAfterViewInit(): void {
+        this.setChart()
+    }  
+
+    setChart() {
         if (this.ctx) {
             const chartData: ChartDataInterface[] = [];
 
@@ -49,5 +53,5 @@ export class GraphComponent implements AfterViewInit {
                 }
             });
         }
-    }  
+    }
 }

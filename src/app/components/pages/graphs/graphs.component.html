@@ -6,6 +6,6 @@
 </div>
 
 <div>
-    <canvas #canvas class="graph final"></canvas>
+    <app-graph *ngIf="graphData.name" [graphData]="graphData" class="graph final" ></app-graph>
 </div>
 <router-outlet name="modal"></router-outlet>
