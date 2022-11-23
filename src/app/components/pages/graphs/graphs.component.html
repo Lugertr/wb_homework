@@ -1,5 +1,5 @@
 <div class="graphsField">
-    <div class="graphs" *ngFor="let graph of GraphsArr; let i = index">
+    <div class="graphs" *ngFor="let graph of graphsArr; let i = index">
         <mat-icon class="fullsize_btn" (click)="fullSizeOpen(i)">zoom_in</mat-icon>
         <app-graph [graphData]="graph"></app-graph>
     </div>
