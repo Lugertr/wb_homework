@@ -18,16 +18,16 @@ import { GraphDataInterface, ChartDataInterface } from 'src/app/types/jsonDataTy
 
 export class GraphsComponent implements OnInit {
 
-  GraphsArr: GraphDataInterface[] = [];
+  graphsArr: GraphDataInterface[] = [];
   @ViewChild('canvas') ctx?:ElementRef<HTMLCanvasElement>;
 
 
   constructor(private jsonToArrConvertService: jsonToArrConvertService,
     public dialog: MatDialog) {}
 
-  ngOnInit(){
+  ngOnInit(): void {
       this.jsonToArrConvertService.readFile()
-      .then(()=>this.GraphsArr = [...this.jsonToArrConvertService.getData()])
+      .then(()=>this.graphsArr = [...this.jsonToArrConvertService.getData()])
       .then(()=>this.createLastGraph())
   }
 
@@ -36,7 +36,7 @@ export class GraphsComponent implements OnInit {
         width: '90%',
         height: '90%',
       })
-      dialogRef.componentInstance.graphData = this.GraphsArr[ind];
+      dialogRef.componentInstance.graphData = this.graphsArr[ind];
   }
 
   createLastGraph():void {
@@ -44,10 +44,10 @@ export class GraphsComponent implements OnInit {
       const chartData: ChartDataInterface[] = [];
       
       //Находим все даты:
-      const allDateArr: Set<string> = new Set(...this.GraphsArr.map((el)=>el.data_arr));
+      const allDateArr: Set<string> = new Set(...this.graphsArr.map((el)=>el.data_arr));
 
       //формируем datasets проходя во всех объектах по всем датам
-      for (let graphData of this.GraphsArr) {
+      for (let graphData of this.graphsArr) {
         const sumArr: number[] = []
         for (let date of allDateArr) {
           const dateInd = graphData.data_arr.indexOf(date);
