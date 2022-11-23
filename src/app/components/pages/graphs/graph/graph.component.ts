@@ -40,6 +40,8 @@ export class GraphComponent implements AfterViewInit {
             new Chart( this.ctx.nativeElement, {
                 type: 'line',
                 options: {
+                    responsive: true, 
+                    maintainAspectRatio: false,
                     plugins: {
                         title: {
                             display: true,
