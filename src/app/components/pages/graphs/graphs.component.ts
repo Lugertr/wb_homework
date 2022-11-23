@@ -25,7 +25,11 @@ export class GraphsComponent implements OnInit {
   constructor(private jsonToArrConvertService: jsonToArrConvertService,
     public dialog: MatDialog) {}
 
+<<<<<<< HEAD
   ngOnInit(): void{
+=======
+  ngOnInit(): void {
+>>>>>>> 57cd1decdc41926c2900e0b66687ab8d52fb904c
       this.jsonToArrConvertService.readFile()
       .then(()=>this.graphsArr = [...this.jsonToArrConvertService.getData()])
       .then(()=>this.createLastGraph())
@@ -46,10 +50,17 @@ export class GraphsComponent implements OnInit {
       //Находим все даты:
       const allDateArr: Set<string> = new Set(...this.graphsArr.map((el)=>el.data_arr));
 
+<<<<<<< HEAD
       const sumArr: number[] = [];
       for (let date of allDateArr) {
         let sum: number = 0;
         for (let graphData of this.graphsArr) {
+=======
+      //формируем datasets проходя во всех объектах по всем датам
+      for (let graphData of this.graphsArr) {
+        const sumArr: number[] = []
+        for (let date of allDateArr) {
+>>>>>>> 57cd1decdc41926c2900e0b66687ab8d52fb904c
           const dateInd = graphData.data_arr.indexOf(date);
           sum +=(!~dateInd) ? 0:
           graphData.orders[dateInd] + graphData.new[dateInd] + graphData.deliver[dateInd] + graphData.returns[dateInd];
