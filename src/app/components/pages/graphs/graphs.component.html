@@ -5,7 +5,5 @@
     </div>
 </div>
 
-<div>
-    <app-graph *ngIf="graphData.name" [graphData]="graphData" class="graph final" ></app-graph>
-</div>
+<app-graph *ngIf="graphData.name" [graphData]="graphData"  class="final"></app-graph>
 <router-outlet name="modal"></router-outlet>
