@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { LinksInterface } from '../types/typesUI';
+import { LinksInterface } from '../data/linksNames';
 
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -37,7 +37,7 @@ export class CustomIconService {
 
   constructor(private matIconRegistry: MatIconRegistry,
               private domSanitizer: DomSanitizer) { 
-
+                
     this.customIconLinks.forEach((value)=>
 
       this.matIconRegistry.addSvgIcon(

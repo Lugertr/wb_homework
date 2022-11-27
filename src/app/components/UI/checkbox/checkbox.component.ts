@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { ChekboxFormsInterface } from 'src/app/types/typesInputForms';
+import { ChekboxFormsInterface } from 'src/app/data/InputForms';
 
 @Component({
   selector: 'app-checkbox',

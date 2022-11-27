@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { LinksInterface } from 'src/app/types/typesUI';
+import { LinksInterface } from 'src/app/data/linksNames'; 
 
 @Component({
   selector: 'app-follow-links',

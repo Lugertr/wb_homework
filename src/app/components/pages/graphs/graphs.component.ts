@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { jsonToArrConvertService} from '../../../services/json-to-arr-coverter.service';
 import {MatDialog} from '@angular/material/dialog';
-import {Chart} from 'chart.js/auto';
 
-import { GraphComponent } from './graph/graph.component';
-
-import { GraphDataInterface, ChartDataInterface } from 'src/app/types/jsonDataTypes';
+import { ChartDataInterface } from '../../../services/json-to-arr-coverter.service';
 
 @Component({
   selector: 'app-graphs',
@@ -18,15 +15,11 @@ import { GraphDataInterface, ChartDataInterface } from 'src/app/types/jsonDataTy
 
 export class GraphsComponent implements OnInit {
 
-  graphsArr: GraphDataInterface[] = [];
-  graphData: GraphDataInterface = {
-    name: '',
-    data_arr: [],
-    orders: [],
-    new: [],
-    deliver: [],
-    returns: [],
-};
+  graphsArr: ChartDataInterface[] = [];
+  sumData: ChartDataInterface = {
+    title: '',
+    label: [],
+    datasets: []}
 
 
 
@@ -35,43 +28,8 @@ export class GraphsComponent implements OnInit {
 
   ngOnInit(): void{
       this.jsonToArrConvertService.readFile()
-      .then(()=>this.graphsArr = [...this.jsonToArrConvertService.getData()])
-      .then(()=>this.createLastGraph())
+      .then(()=>this.graphsArr = this.jsonToArrConvertService.getData())
+      .then(()=>this.sumData = this.jsonToArrConvertService.getSumData())
   }
-
-  fullSizeOpen(ind:number):void {
-      const dialogRef = this.dialog.open(GraphComponent,{
-        width: '90%',
-        height: '90%',
-      })
-      dialogRef.componentInstance.graphData = this.graphsArr[ind];
-  }
-
-  createLastGraph():void {
-      //Находим все даты:
-      const allDateArr: string[] = Array.from(new Set(...this.graphsArr.map((el)=>el.data_arr)));
-      this.graphData.data_arr.push(...allDateArr)
-      
-      for (let date of allDateArr) {
-        let orderSum: number = 0;
-        let newSum: number = 0;
-        let deliverSum: number = 0;
-        let returnsSum: number = 0;
-        for (let graphData of this.graphsArr) {
-          const dateInd = graphData.data_arr.indexOf(date);
-          orderSum +=(!~dateInd) ? 0: graphData.orders[dateInd];
-          newSum += (!~dateInd) ? 0: graphData.new[dateInd]
-          deliverSum += (!~dateInd) ? 0: graphData.deliver[dateInd]
-          returnsSum += (!~dateInd) ? 0: graphData.returns[dateInd]
-        }
-        this.graphData.orders.push(orderSum)
-        this.graphData.new.push(newSum)
-        this.graphData.deliver.push(deliverSum)
-        this.graphData.returns.push(returnsSum)
-
-        this.graphData.name = 'Суммарные значения всех офисов'
-    }
-  }
-
 
 }

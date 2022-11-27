@@ -12,12 +12,12 @@
 .contact_label{font-size: 14px;}
 
 a{
-    line-height: 150%;
-    font-size: 18px;
-    font-weight: 400;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+    line-height:150%;
+    font-size:18px;
+    font-weight:400;
+    text-decoration:none;
+    color:inherit;
+    cursor:pointer;
     &:hover{
         color: #FF3F3A;
     }
@@ -26,16 +26,18 @@ a{
 //
 :host{
     padding-top: 124px;
-    display: flex;
+    display:flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 100%;
 }
 
-.h2top{margin-bottom: 8px;}
+.h2top{
+    margin-bottom: 8px;
+}
 
-.contactsArea, .askArea {
+.contactsArea,.askArea{
     width: $structureWidth;
     display: flex;
     flex-direction: row;
@@ -43,9 +45,11 @@ a{
 
 
 .askArea{
-    display: flex;
-    flex-direction: row;
-    margin-top: 168px;
-    margin-bottom: 180px;
+    display:flex;
+    flex-direction:row;
+    margin-top:168px;
+    margin-bottom:180px;
+    column-gap: 105px;
+    max-width: 100%;
 }
 

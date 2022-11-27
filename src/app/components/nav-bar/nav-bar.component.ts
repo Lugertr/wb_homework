@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import {Router} from '@angular/router';
 
-import { LinksInterface } from 'src/app/types/typesUI';
+import { LinksInterface } from 'src/app/data/linksNames';
 
 @Component({
   selector: 'app-nav-bar',

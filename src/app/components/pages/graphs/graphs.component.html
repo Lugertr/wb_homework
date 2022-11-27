@@ -1,9 +1,6 @@
 <div class="graphsField">
-    <div class="graphs" *ngFor="let graph of graphsArr; let i = index">
-        <mat-icon class="fullsize_btn" (click)="fullSizeOpen(i)">zoom_in</mat-icon>
-        <app-graph [graphData]="graph"></app-graph>
-    </div>
+    <app-graph class="graphs" *ngFor="let graph of graphsArr" [graphData]="graph"></app-graph>
 </div>
 
-<app-graph *ngIf="graphData.name" [graphData]="graphData"  class="final"></app-graph>
+<app-graph *ngIf="sumData.title" [graphData]="sumData"  class="final"></app-graph>
 <router-outlet name="modal"></router-outlet>

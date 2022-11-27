@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { InputFormsInterface,ChekboxFormsInterface } from 'src/app/types/typesInputForms';
-import { LinksInterface } from 'src/app/types/typesUI';
+import {  ChekboxFormsInterface } from 'src/app/data/InputForms';
+import { LinksInterface } from 'src/app/data/linksNames';
 
 import { contactInputForm, contactMessageInput } from 'src/app/data/InputForms';
 import { social_networks_links } from 'src/app/data/linksNames';
+import {contactsData} from 'src/app/data/contactsData';
 
 declare var ymaps:any;
 
@@ -17,8 +18,11 @@ export class ContactsComponent implements OnInit {
 
   social_networks: LinksInterface[] = social_networks_links;
 
-  inputs: InputFormsInterface[] = contactInputForm;
-  lastInput: InputFormsInterface = contactMessageInput;
+  inputs = contactInputForm;
+  lastInput = contactMessageInput;
+
+  contactsData = contactsData;
+  
   constructor() {}
   
   checkboxData: ChekboxFormsInterface = {

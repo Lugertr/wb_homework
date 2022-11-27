@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ChekboxFormsInterface } from 'src/app/types/typesInputForms';
+import { ChekboxFormsInterface } from 'src/app/data/InputForms'; 
 import { BlogDataInterface,blogCards } from 'src/app/data/blogsData';
 
-import { LinksInterface } from 'src/app/types/typesUI';
+import { LinksInterface } from 'src/app/data/linksNames';
 import { blogArticle_social_links,blogArticle_author_links } from 'src/app/data/linksNames';
 
 @Component({

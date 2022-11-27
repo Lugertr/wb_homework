@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ChangeDetectorRef} from '@angular/core';
 
-import { InputFormsInterface } from 'src/app/types/typesInputForms';
+import { InputFormsInterface } from 'src/app/data/InputForms'; 
 
 @Component({
   selector: 'app-input',

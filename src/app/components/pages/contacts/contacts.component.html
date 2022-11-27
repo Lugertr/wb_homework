@@ -7,7 +7,7 @@
             <mat-icon class="link" svgIcon="chat"></mat-icon>
             <div class="contactAdressFormData">
                 <label class="contact_label">Talk to us:</label>
-                <a href="mailto:hello@createx.com">hello@createx.com</a>
+                <a [href]="contactsData['email'].href">{{contactsData['email'].label}}</a>
             </div>
         </div>
         
@@ -15,7 +15,7 @@
             <mat-icon class="link" svgIcon="iphone"></mat-icon>
             <div class="contactAdressFormData">
                 <label class="contact_label">Call us:</label>
-                <a href="tel:+4055550128">(405) 555-0128</a>
+                <a [href]="contactsData['tel'].href">{{contactsData['tel'].label}}</a>
             </div>
         </div>
         

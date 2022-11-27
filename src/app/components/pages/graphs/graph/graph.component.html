@@ -1,1 +1,8 @@
 <canvas #canvas class="graph"></canvas>
+<div *ngIf="isDialog; then closeBtb else openFullSize"></div>
+<ng-template #closeBtb>
+    <mat-icon class="fullsize_btn" (click)="closeDialog()">close</mat-icon>
+</ng-template>
+<ng-template #openFullSize>
+    <mat-icon class="fullsize_btn" (click)="fullSizeOpen()">fullscreen</mat-icon>
+</ng-template>

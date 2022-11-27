@@ -1,7 +1,8 @@
 import { AfterViewInit, Component, ElementRef, Input,  ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import {Chart} from 'chart.js/auto';
 
-import { GraphDataInterface, ChartDataInterface } from 'src/app/types/jsonDataTypes';
+import { ChartDataInterface } from 'src/app/services/json-to-arr-coverter.service';
 
 @Component({
     selector: 'app-graph',
@@ -11,14 +12,14 @@ import { GraphDataInterface, ChartDataInterface } from 'src/app/types/jsonDataTy
 export class GraphComponent implements AfterViewInit {
 
     @ViewChild('canvas') ctx?:ElementRef<HTMLCanvasElement>;
-    @Input() graphData: GraphDataInterface = {
-        name: '',
-        data_arr: [],
-        orders: [],
-        new: [],
-        deliver: [],
-        returns: [],
+    @Input() graphData: ChartDataInterface = {
+        title: "none",
+        label: [],
+        datasets: []
     };
+    @Input() isDialog = false;
+
+    constructor(public dialog: MatDialog) {}
 
     ngAfterViewInit(): void {
         this.setChart()
@@ -26,34 +27,37 @@ export class GraphComponent implements AfterViewInit {
 
     setChart() {
         if (this.ctx) {
-            const chartData: ChartDataInterface[] = [];
-
-            Object.keys(this.graphData).forEach((key)=>{
-                if (key !== 'name' && key!=='data_arr')
-                    chartData.push({
-                        label: key,
-                        data: this.graphData[key as keyof GraphDataInterface] as number[],
-                        borderWidth: 1
-                })   
-            })
             
             new Chart( this.ctx.nativeElement, {
                 type: 'line',
                 options: {
-                    responsive: true, 
+                    responsive: false, 
                     maintainAspectRatio: false,
                     plugins: {
                         title: {
                             display: true,
-                            text: this.graphData.name
+                            text: this.graphData.title
                         }
                     }
                 },
                 data: {
-                    labels: this.graphData.data_arr,
-                    datasets: chartData
+                    labels: this.graphData.label,
+                    datasets: this.graphData.datasets
                 }
             });
         }
+    }
+
+    fullSizeOpen():void {
+        const dialogRef = this.dialog.open(GraphComponent,{
+            width: '90%',
+            height: '90%',
+        })
+        dialogRef.componentInstance.graphData = this.graphData;
+        dialogRef.componentInstance.isDialog = true;
+    }
+
+    closeDialog():void{
+        this.dialog.closeAll()
     }
 }

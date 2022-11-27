@@ -1,4 +1,7 @@
-import { LinksInterface } from "../types/typesUI";
+export interface LinksInterface {
+    name: string,
+    link: string 
+}
 
 export const siteMap: LinksInterface[] = [
     {name:"About Us",link: ''},

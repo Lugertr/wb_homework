@@ -2,9 +2,9 @@ import { Component} from '@angular/core';
 import {MatDialogRef} from '@angular/material/dialog';
 import { Router} from '@angular/router';
 
-import { ChekboxFormsInterface } from 'src/app/types/typesInputForms';
-import { InputFormsInterface } from 'src/app/types/typesInputForms';
-import { LinksInterface } from 'src/app/types/typesUI';
+import { ChekboxFormsInterface } from 'src/app/data/InputForms';
+import { InputFormsInterface } from 'src/app/data/InputForms'; 
+import { LinksInterface } from 'src/app/data/linksNames'; 
 
 import { signUpForm } from 'src/app/data/InputForms';
 import { modal_social_links } from 'src/app/data/linksNames';

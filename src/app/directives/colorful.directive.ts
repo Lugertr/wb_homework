@@ -18,12 +18,11 @@ export class ColorfulDirective{
         this.setGrayscale()
     }
 
-    setGrayscale() {
-        console.log('test')
+    setGrayscale(): void {
         this.renderer.setStyle(this.elementRef.nativeElement, "filter", "grayscale(100%) blur(1px)");
     }
 
-    deleteGrayscale() { 
+    deleteGrayscale(): void { 
         this.renderer.setStyle(this.elementRef.nativeElement, "filter", "");
     }
 
