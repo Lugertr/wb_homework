@@ -1,6 +1,10 @@
 import {DOCUMENT} from '@angular/common';
-import {inject} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 
+
+@Injectable({
+    providedIn: 'root'
+  })
 export class hostGetter {
 
     private host:Window

@@ -6,7 +6,6 @@ import { hostGetter } from './services/host-getter.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers:  [ hostGetter  ],
 })
 export class AppComponent implements OnInit  {
   title = 'my-app';
