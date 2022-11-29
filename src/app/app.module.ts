@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppMaterial } from './app-material.module';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { ColorfulDirective } from './directives/colorful.directive';
+import { СustomInterceptor } from './services/custom.interceptor';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
@@ -21,7 +22,8 @@ import { DialogSignUp } from './components/sign-modal/sign-up.component/sign-up.
 import { BlogCardComponent } from './components/UI/blog-card/blog-card.component';
 import { GraphsComponent } from './components/pages/graphs/graphs.component';
 import { GraphComponent } from './components/pages/graphs/graph/graph.component';
-
+import { SinglePostComponent } from './components/pages/blog/single-post/single-post.component';
+import { SubscribeComponent } from './components/UI/subscribe/subscribe.component';
 
 @NgModule({
   declarations: [
@@ -39,8 +41,10 @@ import { GraphComponent } from './components/pages/graphs/graph/graph.component'
     BlogCardComponent,
     GraphsComponent,
     GraphComponent,
+    SinglePostComponent,
 
     ColorfulDirective,
+     SubscribeComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,9 @@ import { GraphComponent } from './components/pages/graphs/graph/graph.component'
     AppMaterial,
     HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: СustomInterceptor, multi: true },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

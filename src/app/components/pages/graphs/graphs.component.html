@@ -1,6 +1,14 @@
 <div class="graphsField">
-    <app-graph class="graphs" *ngFor="let graph of graphsArr" [graphData]="graph"></app-graph>
+  <app-graph
+    class="graphs"
+    *ngFor="let graph of graphsArr"
+    [graphData]="graph"
+  ></app-graph>
 </div>
 
-<app-graph *ngIf="sumData.title" [graphData]="sumData"  class="final"></app-graph>
-<router-outlet name="modal"></router-outlet>
+<app-graph
+  *ngIf="sumData.title"
+  [graphData]="sumData"
+  class="final"
+></app-graph>
+<router-outlet name="modal" class="outlet"></router-outlet>

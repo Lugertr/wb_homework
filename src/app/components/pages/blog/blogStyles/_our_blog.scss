@@ -1,5 +1,5 @@
 .our_blog{
-    width: $structureWidth;
+    max-width: $structureWidth;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,6 +48,7 @@
         column-gap: 40px;
         align-items: center;
         justify-items: center;
+        margin-bottom: 120px;
     
     }
 

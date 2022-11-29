@@ -1,19 +1,28 @@
-<div class="dialog" >
-    <div class="cross" (click)="close()"></div>
+<div class="dialog">
+  <div class="cross" (click)="close()"></div>
 
-    <form class="form">
-        <h1>Sign up</h1>
-        <p>Registration takes less than a minute but gives you full control<br>over your studying.</p>
-        <div class="inputDataPanel">
-            <app-input *ngFor="let inputs of regForm" [data]="inputs"></app-input>
-            <div class="checkboxModal">
-                <app-checkbox [data]="checkboxData"></app-checkbox>
-            </div>
-        </div>
-        <button class="btn">Sign Up</button>
-        <span>Already have an account? <span class="linkText" (click)="switch()">Sign in</span></span>
-    </form>
-    <div class="line"></div>
-    <p>Or sign in with</p>
-    <app-follow-links class="links_soc" [linksArr]=" social_links"></app-follow-links>
+  <form class="form">
+    <h1>Sign up</h1>
+    <p>
+      Registration takes less than a minute but gives you full control<br />over
+      your studying.
+    </p>
+    <div class="inputDataPanel">
+      <app-input *ngFor="let inputs of regForm" [data]="inputs"></app-input>
+      <div class="checkboxModal">
+        <app-checkbox [data]="checkboxData"></app-checkbox>
+      </div>
+    </div>
+    <button class="btn">Sign Up</button>
+    <span
+      >Already have an account?
+      <span class="linkText" (click)="switch()">Sign in</span></span
+    >
+  </form>
+  <div class="line"></div>
+  <p>Or sign in with</p>
+  <app-follow-links
+    class="links_soc"
+    [linksArr]="social_links"
+  ></app-follow-links>
 </div>

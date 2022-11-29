@@ -5,52 +5,59 @@ import { ContactsComponent } from './components/pages/contacts/contacts.componen
 import { BlogComponent } from './components/pages/blog/blog.component';
 import { GraphsComponent } from './components/pages/graphs/graphs.component';
 import { SignModalComponent } from './components/sign-modal/sign-modal.component';
-import { DefaultUrlSerializer,UrlSerializer, UrlTree } from '@angular/router';
+import { DefaultUrlSerializer, UrlSerializer, UrlTree } from '@angular/router';
+import { SinglePostComponent } from './components/pages/blog/single-post/single-post.component';
 
 const SignRoute: Routes = [
   {
     path: 'sign_in',
     component: SignModalComponent,
-    outlet:'modal',
+    outlet: 'modal',
   },
   {
     path: 'sign_up',
     component: SignModalComponent,
-    outlet:'modal'
+    outlet: 'modal',
   },
-]
-
-const appRoutes: Routes =[
-  { path: 'contacts', component: ContactsComponent ,
-  children: SignRoute},
-  { path: 'single-post', component: BlogComponent,
-  children: SignRoute},
-  { path: 'graphs', component: GraphsComponent,
-  children: SignRoute},
- // { path: 'contacts', component: SignModalComponent,
- // children: SignRoute},
-  { path: '**',redirectTo: '/contacts'}
-  
 ];
 
-//message.replace(/\(modal:|\)/gm,'')
+const appRoutes: Routes = [
+  { path: 'contacts', component: ContactsComponent, children: SignRoute },
+
+  {
+    path: 'blog',
+    children: [
+      {
+        path: '',
+        component: BlogComponent,
+        children: SignRoute,
+      },
+      {
+        path: 'single-post',
+        component: SinglePostComponent,
+        children: SignRoute,
+      },
+    ],
+  },
+
+  { path: 'graphs', component: GraphsComponent, children: SignRoute },
+  { path: '**', redirectTo: 'contacts' },
+];
 
 class CustomUrlSerializer extends DefaultUrlSerializer {
   private _newURL(url: string): string {
-    return url
-    .replace(/\(modal:|\)/gm,'')
+    return url.replace(/\(modal:|\)/gm, '');
   }
   override serialize(tree: UrlTree): string {
     return this._newURL(super.serialize(tree));
   }
 }
 
-
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [
+    RouterModule.forRoot(appRoutes, { scrollPositionRestoration: 'top' }),
+  ],
   exports: [RouterModule],
-  providers: [
-    { provide: UrlSerializer, useClass: CustomUrlSerializer }
-  ]
+  providers: [{ provide: UrlSerializer, useClass: CustomUrlSerializer }],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

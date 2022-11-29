@@ -1,13 +1,14 @@
-    <label [for]="data.labelName">{{data.labelName}}</label>
-    <input 
-        class="input"
-        [class.input_password]="(data.type==='password')"
-        [name]="data.labelName"
-        [type]="inputType"
-        [required]="data.required"
-        autocomplete="on"
-        [placeholder]="data.placeholder">
+<label [for]="data.labelName">{{ data.labelName }}</label>
+<input
+  class="input"
+  [class.input_password]="data.type === 'password'"
+  [name]="data.labelName"
+  [type]="inputType"
+  [required]="data.required"
+  autocomplete="on"
+  [placeholder]="data.placeholder"
+/>
 
-    <div class="input_password_btn" *ngIf="this.data.type === 'password'">
-        <mat-icon class="eye" svgIcon="eye" (click)="changeType()"></mat-icon>
-    </div>
+<div class="input_password_btn" *ngIf="this.data.type === 'password'">
+  <mat-icon class="eye" svgIcon="eye" (click)="changeType()"></mat-icon>
+</div>
