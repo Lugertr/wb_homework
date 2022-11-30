@@ -1,19 +1,12 @@
 import { DOCUMENT } from '@angular/common';
-import { inject, Injectable } from '@angular/core';
+import { inject, InjectionToken } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root',
-})
-export class hostGetter {
-  private host: Window;
-
-  constructor() {
+export const HOSTGETTER = new InjectionToken<string>('Window object', {
+  factory: () => {
     const { defaultView } = inject(DOCUMENT);
-    if (!defaultView) throw new Error('Window is not available');
-    this.host = defaultView;
-  }
-
-  getHost(): Window {
-    return this.host;
-  }
-}
+    if (!defaultView) {
+      throw new Error('Window is not available');
+    }
+    return defaultView.URL.toString() + Math.random();
+  },
+});

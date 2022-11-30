@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { CustomIconService } from './services/custom-icon.service';
-import { hostGetter } from './services/host-getter.service';
+import { HOSTGETTER } from './services/host-getter.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,10 @@ import { hostGetter } from './services/host-getter.service';
 export class AppComponent implements OnInit {
   title = 'my-app';
 
-  constructor(CustomIconService: CustomIconService, hostGetter: hostGetter) {}
+  constructor(
+    CustomIconService: CustomIconService,
+    @Inject(HOSTGETTER) private HostGetter: Window
+  ) {}
 
   ngOnInit() {}
 }

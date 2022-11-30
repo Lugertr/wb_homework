@@ -54,7 +54,9 @@ export class jsonToArrConvertService {
   }
 
   async readFile(): Promise<any> {
-    return fetch('assets/json/charts.json')
+    return fetch('assets/json/charts.json', {
+      mode: 'no-cors',
+    })
       .then((res) => res.json())
       .then((res) => {
         const data: Map<number, ChartDataInterface> = new Map();

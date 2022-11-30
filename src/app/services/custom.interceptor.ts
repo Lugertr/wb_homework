@@ -19,8 +19,7 @@ export class СustomInterceptor implements HttpInterceptor {
         .set('custom-study-token', 'perfect future is waiting for us')
         .set('Auth', `Bearer don't forget password `),
     });
-    console.log(req);
-    console.log(newReq);
+
     return next.handle(newReq);
   }
 }

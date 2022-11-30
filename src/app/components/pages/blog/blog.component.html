@@ -81,7 +81,10 @@
   >
     {{ numb }}
   </div>
-  <mat-icon class="pag_arrow" (click)="setPage(curentPage + 1)"
+  <mat-icon
+    class="pag_arrow"
+    (click)="setPage(curentPage + 1)"
+    *ngIf="pageNumbers.length != curentPage"
     >arrow_right_alt</mat-icon
   >
 </div>
