@@ -1,92 +1,42 @@
 <div class="title">
-  <h2>Our blog</h2>
-  <h1>Createx School Journal</h1>
-</div>
-<div class="pagToolbar">
-  <div class="tabs">
-    <div
-      class="tab"
-      (click)="sortCards('type', 'all')"
-      [ngClass]="{ tab_active: sortBlogPars.type == 'all' }"
-    >
-      <label>All</label>
-    </div>
-    <div
-      class="tab"
-      [ngClass]="{ tab_active: sortBlogPars.type == 'Article' }"
-      (click)="sortCards('type', 'Article')"
-    >
-      <mat-icon class="icon_logo material-icons-outlined reverse"
-        >description</mat-icon
-      >
-      <label>Articles</label>
-    </div>
-    <div
-      class="tab"
-      [ngClass]="{ tab_active: sortBlogPars.type == 'Video' }"
-      (click)="sortCards('type', 'Video')"
-    >
-      <mat-icon svgIcon="play"></mat-icon>
-      <label>Videos</label>
-    </div>
-    <div
-      class="tab"
-      [ngClass]="{ tab_active: sortBlogPars.type == 'Podcast' }"
-      (click)="sortCards('type', 'Podcast')"
-    >
-      <mat-icon svgIcon="mic"></mat-icon>
-      <label>Podcasts</label>
-    </div>
-  </div>
-
-  <div class="tabs">
-    <div class="category">
-      <label>Blog category</label>
-      <select (change)="sortCards('theme', $any($event.target).value)">
-        <option value="all" selected>all themes</option>
-        <option *ngFor="let option of selectOptions" [value]="option">
-          {{ option }}
-        </option>
-      </select>
-    </div>
-    <input class="input" placeholder="Search blog..." #searchInput />
-    <mat-icon
-      class="search_input_icon"
-      (click)="sortCards('title', searchInput.value)"
-      >search</mat-icon
-    >
-  </div>
+    <h2>Our blog</h2>
+    <h1>Createx School Journal</h1>
 </div>
 
-<div class="articleList" *ngIf="filtredCards.length; else EmptyPostsMes">
-  <app-blog-card
-    *ngFor="let card of filtredCards; index as i"
-    class="card"
-    (click)="openPost(i)"
-    [data]="card"
-    [ngClass]="{ middleBigCard: i == 3, middleSmallCard: i == 4 }"
-  ></app-blog-card>
+<app-sort-panel></app-sort-panel>
+
+<div
+    class="articleList"
+    *ngIf="(sortedBlogs$ | async)?.length; else EmptyPostsMes">
+    <app-blog-card
+        *ngFor="let card of (sortedBlogs$ | async)?.blogs; index as i"
+        class="card"
+        (click)="openPost(i)"
+        [data]="card"
+        [ngClass]="{
+            'middle-big-card': i == 3,
+            'middle-small=card': i == 4
+        }"></app-blog-card>
 </div>
 
 <ng-template #EmptyPostsMes>
-  <h1>Blogs not found</h1>
+    <h1>Blogs not found</h1>
 </ng-template>
 
-<div *ngIf="pageNumbers.length > 1" class="pag">
-  <div
-    *ngFor="let numb of pageNumbers"
-    class="pag_number"
-    [ngClass]="{ pag_number_active: numb === curentPage }"
-    (click)="setPage(numb)"
-  >
-    {{ numb }}
-  </div>
-  <mat-icon
-    class="pag_arrow"
-    (click)="setPage(curentPage + 1)"
-    *ngIf="pageNumbers.length != curentPage"
-    >arrow_right_alt</mat-icon
-  >
+<div *ngIf="pageNumbers.length > 1" class="pagination">
+    <div
+        *ngFor="let numb of pageNumbers"
+        class="pagination_number"
+        [ngClass]="{ pagination_number_active: numb === curentPage }"
+        (click)="setPage(numb)">
+        {{ numb }}
+    </div>
+    <mat-icon
+        class="pagination_arrow"
+        (click)="setPage(curentPage + 1)"
+        *ngIf="pageNumbers.length != curentPage">
+        arrow_right_alt
+    </mat-icon>
 </div>
 
 <app-subscribe></app-subscribe>

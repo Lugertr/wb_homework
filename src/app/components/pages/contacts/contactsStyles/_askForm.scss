@@ -1,16 +1,17 @@
-.askImg{
+.askImg {
     padding-top: 67px;
     padding-bottom: 66px;
     font-size: 200px;
     text-align: center;
 }
 
-.askInputArea,.sendForm{
+.askInputArea,
+.sendForm {
     font-weight: 400;
     line-height: 160%;
 }
 
-.askForm{
+.askForm {
     width: 100%;
     height: 100%;
     display: flex;
@@ -18,16 +19,16 @@
 }
 
 
-.askInputArea{
+.askInputArea {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr (2fr);
-    gap:24px;
+    gap: 24px;
     align-items: center;
     margin-bottom: 48px;
 }
 
-.mesArea{
+.mesArea {
     padding-top: 24px;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -38,7 +39,7 @@
     margin-bottom: 48px;
 }
 
-.mes{
+.mes {
     margin-top: 8px;
     background: #FFFFFF;
     border: 1px solid #D7DADD;
@@ -50,12 +51,13 @@
 }
 
 
-.sendForm{
+.sendForm {
     display: flex;
     flex-direction: row;
     align-items: center;
     column-gap: 25px;
 }
 
-.btn{height: 52px;
+.btn {
+    height: 52px;
 }

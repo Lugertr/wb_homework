@@ -3,31 +3,24 @@ import { jsonToArrConvertService } from '../../../services/json-to-arr-coverter.
 import { MatDialog } from '@angular/material/dialog';
 
 import { ChartDataInterface } from '../../../services/json-to-arr-coverter.service';
+import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-graphs',
-  templateUrl: './graphs.component.html',
-  styleUrls: ['./graphs.component.scss'],
-  providers: [jsonToArrConvertService],
-  host: { '[class.page]': 'true' },
+    selector: 'app-graphs',
+    templateUrl: './graphs.component.html',
+    styleUrls: ['./graphs.component.scss'],
+    providers: [jsonToArrConvertService],
+    host: { '[class.page]': 'true' },
 })
 export class GraphsComponent implements OnInit {
-  graphsArr: ChartDataInterface[] = [];
-  sumData: ChartDataInterface = {
-    title: '',
-    label: [],
-    datasets: [],
-  };
+    graphsArr$: Observable<ChartDataInterface[]>;
 
-  constructor(
-    private jsonToArrConvertService: jsonToArrConvertService,
-    public dialog: MatDialog
-  ) {}
+    constructor(
+        private jsonToArrConvertService: jsonToArrConvertService,
+        public dialog: MatDialog
+    ) {
+        this.graphsArr$ = this.jsonToArrConvertService.readFile();
+    }
 
-  ngOnInit(): void {
-    this.jsonToArrConvertService
-      .readFile()
-      .then(() => (this.graphsArr = this.jsonToArrConvertService.getData()))
-      .then(() => (this.sumData = this.jsonToArrConvertService.getSumData()));
-  }
+    ngOnInit(): void {}
 }

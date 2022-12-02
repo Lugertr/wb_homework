@@ -1,19 +1,18 @@
 <img src="assets/logo/Logo_black.svg" class="logo" alt="Createx" />
 
 <ul class="navList">
-  <li
-    class="navList_el"
-    routerLinkActive="active"
-    [routerLink]="links.link"
-    *ngFor="let links of linksArr"
-  >
-    {{ links.name }}
-  </li>
+    <li
+        class="navList_el"
+        routerLinkActive="active"
+        [routerLink]="links.link"
+        *ngFor="let links of linksArr">
+        {{ links.name }}
+    </li>
 </ul>
 <div class="cta">
-  <button class="btn">Get consultaion</button>
-  <div class="logArea" (click)="openModal()">
-    <mat-icon class="link" svgIcon="person"></mat-icon>
-    <span>Log in / Register</span>
-  </div>
+    <button class="btn">Get consultaion</button>
+    <div class="logArea" (click)="openModal()">
+        <mat-icon class="link" svgIcon="person"></mat-icon>
+        <span>Log in / Register</span>
+    </div>
 </div>

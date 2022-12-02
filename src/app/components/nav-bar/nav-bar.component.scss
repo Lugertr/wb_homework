@@ -1,12 +1,14 @@
 @import "../../styles/var";
 
-.navList,.logArea{
+.navList,
+.logArea {
     color: #424551;
     font-weight: 700;
     font-size: 16px;
-    line-height: 160%;}
+    line-height: 160%;
+}
 
-:host{
+:host {
     margin-top: 20px;
     margin-bottom: 80px;
     max-width: $structureWidth;
@@ -18,7 +20,7 @@
 }
 
 
-.navList{
+.navList {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -27,17 +29,19 @@
     column-gap: 40px;
     margin-right: 40px;
 
-    &_el{
+    &_el {
         cursor: pointer;
         text-decoration: none;
     }
-    &_el:hover, .active{
-        color:#FF3F3A;
+
+    &_el:hover,
+    .active {
+        color: $active-color;
     }
 }
 
 
-.cta{
+.cta {
     width: 100%;
     height: 100%;
     display: flex;
@@ -46,29 +50,29 @@
     align-items: center;
 }
 
-.btn{       
+.btn {
     min-height: 52px;
 }
 
-.logArea{
+.logArea {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:flex-end;
+    justify-content: flex-end;
     width: 100%;
     column-gap: 10px;
     cursor: pointer;
 
-    &:hover{
-        color:#FF3F3A;
+    &:hover {
+        color: $active-color;
     }
 
-    .link{
+    .link {
         font-size: 15px;
         min-width: 16px;
         min-height: 17px;
         width: 16px;
         height: 18px;
-        
+
     }
 }

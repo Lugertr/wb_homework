@@ -1,68 +1,71 @@
 <div class="contactsArea">
-  <div class="contactsInfo">
-    <h2 class="h2top">CONTACT INFO</h2>
-    <h1>Get in touch</h1>
+    <div class="contactsInfo">
+        <h2 class="h2top">CONTACT INFO</h2>
+        <h1>Get in touch</h1>
 
-    <div class="contactAdressForm">
-      <mat-icon class="link" svgIcon="chat"></mat-icon>
-      <div class="contactAdressFormData">
-        <label class="contact_label">Talk to us:</label>
-        <a [href]="contactsData['email'].href">{{
-          contactsData["email"].label
-        }}</a>
-      </div>
+        <div class="contactAdressForm">
+            <mat-icon class="link" svgIcon="chat"></mat-icon>
+            <div class="contactAdressFormData">
+                <label class="contact_label">Talk to us:</label>
+                <a [href]="contactsData['email'].href">
+                    {{ contactsData['email'].label }}
+                </a>
+            </div>
+        </div>
+
+        <div class="contactAdressForm">
+            <mat-icon class="link" svgIcon="iphone"></mat-icon>
+            <div class="contactAdressFormData">
+                <label class="contact_label">Call us:</label>
+                <a [href]="contactsData['tel'].href">
+                    {{ contactsData['tel'].label }}
+                </a>
+            </div>
+        </div>
+
+        <div class="contactAdressForm">
+            <mat-icon class="link" svgIcon="outline"></mat-icon>
+            <div class="contactAdressFormData">
+                <label class="contact_label">Address:</label>
+                <a>2464 Royal Ln. Mesa, New Jersey 45463, USA</a>
+            </div>
+        </div>
+
+        <h2 class="h2bottom">FOLLOW US:</h2>
+        <app-follow-links
+            class="links"
+            [linksArr]="social_networks"></app-follow-links>
     </div>
-
-    <div class="contactAdressForm">
-      <mat-icon class="link" svgIcon="iphone"></mat-icon>
-      <div class="contactAdressFormData">
-        <label class="contact_label">Call us:</label>
-        <a [href]="contactsData['tel'].href">{{ contactsData["tel"].label }}</a>
-      </div>
-    </div>
-
-    <div class="contactAdressForm">
-      <mat-icon class="link" svgIcon="outline"></mat-icon>
-      <div class="contactAdressFormData">
-        <label class="contact_label">Address:</label>
-        <a>2464 Royal Ln. Mesa, New Jersey 45463, USA</a>
-      </div>
-    </div>
-
-    <h2 class="h2bottom">FOLLOW US:</h2>
-    <app-follow-links
-      class="links"
-      [linksArr]="social_networks"
-    ></app-follow-links>
-  </div>
-  <div id="map" class="map"></div>
+    <div id="map" class="map"></div>
 </div>
 
 <div class="askArea">
-  <img
-    class="img askImg"
-    src="assets/contacts/Askform_illustration.svg"
-    alt="ASK US"
-  />
-  <div class="askForm">
-    <h2 class="h2top">ANY QUESTIONS?</h2>
-    <h1>Drop us a line</h1>
-    <div class="askInputArea">
-      <app-input *ngFor="let input of inputs" [data]="input"></app-input>
-      <div class="mesArea">
-        <label [for]="lastInput.labelName">{{ lastInput.labelName }}</label>
-        <textarea
-          class="mes"
-          [name]="lastInput.labelName"
-          [required]="lastInput.required"
-          [placeholder]="lastInput.placeholder"
-        ></textarea>
-      </div>
+    <img
+        class="img askImg"
+        src="assets/contacts/Askform_illustration.svg"
+        alt="ASK US" />
+    <div class="askForm">
+        <h2 class="h2top">ANY QUESTIONS?</h2>
+        <h1>Drop us a line</h1>
+        <div class="askInputArea">
+            <app-input-definer *ngFor="let input of inputs" [data]="input"></app-input-definer>
+            <div class="mesArea">
+                <label [for]="lastInput.labelName">
+                    {{ lastInput.labelName }}
+                </label>
+                <textarea
+                    class="mes"
+                    [name]="lastInput.labelName"
+                    [required]="lastInput.required"
+                    [placeholder]="lastInput.placeholder"></textarea>
+            </div>
+        </div>
+        <div class="sendForm">
+            <app-checkbox
+                class="agreeChekbox"
+                [data]="checkboxData"></app-checkbox>
+            <button class="btn">Send message</button>
+        </div>
     </div>
-    <div class="sendForm">
-      <app-checkbox class="agreeChekbox" [data]="checkboxData"></app-checkbox>
-      <button class="btn">Send message</button>
-    </div>
-  </div>
 </div>
 <router-outlet name="modal" class="outlet"></router-outlet>

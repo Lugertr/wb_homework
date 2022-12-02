@@ -1,9 +1,11 @@
-:host{
-    top:0;
-    bottom:0;
+@import '../../styles/var';
+
+:host {
+    top: 0;
+    bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
     position: fixed;
     display: flex;
@@ -13,12 +15,14 @@
 .dialog {
     margin: auto;
     background: white;
+    border-radius: 4px;
     align-items: center;
     padding: 48px;
     position: relative;
 }
 
-.form,.dialog{
+.form,
+.dialog {
     display: flex;
     flex-direction: column;
     row-gap: 24px;
@@ -39,7 +43,9 @@
 .cross:hover {
     opacity: 1;
 }
-.cross:before, .cross:after {
+
+.cross:before,
+.cross:after {
     position: absolute;
     left: 7px;
     top: -2px;
@@ -48,55 +54,57 @@
     width: 2px;
     background-color: #333;
 }
+
 .cross:before {
     transform: rotate(45deg);
 }
+
 .cross:after {
     transform: rotate(-45deg);
 }
 
 
-p{
+p {
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
     text-align: center;
 }
 
-h1{
+h1 {
     font-weight: 700;
     font-size: 28px;
     line-height: 150%;
 }
 
-span{
+span {
     font-weight: 400;
-font-size: 14px;
-line-height: 150%;
-align-self:flex-start
+    font-size: 14px;
+    line-height: 150%;
+    align-self: flex-start
 }
 
-.line{
+.line {
     height: 1px;
     background-color: #E5E8ED;
     width: calc(100% + 96px);
 }
 
 
-.linkText{
-    color: #FF3F3A;
-    cursor: pointer; 
-    width: 100%;  
+.linkText {
+    color: $active-color;
+    cursor: pointer;
+    width: 100%;
     text-align: right;
 }
 
-.links_soc{
+.links_soc {
     min-height: 18px;
     column-gap: 18px;
     color: #787A80;
 }
 
-.inputDataPanel{
+.inputDataPanel {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -105,15 +113,14 @@ align-self:flex-start
     line-height: 150%;
 }
 
-.btn{
+.btn {
     height: 44px;
 }
 
-.checkboxModal{
+.checkboxModal {
     display: flex;
     flex-direction: row;
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
 }
-

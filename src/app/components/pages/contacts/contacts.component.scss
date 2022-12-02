@@ -6,49 +6,57 @@
 
 //шрифты
 
-.contact_label{font-weight: 700;}
-.contact_label{line-height: 150%;}
+.contact_label {
+    font-weight: 700;
+}
 
-.contact_label{font-size: 14px;}
+.contact_label {
+    line-height: 150%;
+}
 
-a{
-    line-height:150%;
-    font-size:18px;
-    font-weight:400;
-    text-decoration:none;
-    color:inherit;
-    cursor:pointer;
-    &:hover{
-        color: #FF3F3A;
+.contact_label {
+    font-size: 14px;
+}
+
+a {
+    line-height: 150%;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+
+    &:hover {
+        color: $active-color;
     }
 }
 
 //
-:host{
-    display:flex;
+:host {
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 100%;
 }
 
-.h2top{
+.h2top {
     margin-bottom: 8px;
 }
 
-.contactsArea,.askArea{
+.contactsArea,
+.askArea {
     width: $structureWidth;
     display: flex;
     flex-direction: row;
 }
 
 
-.askArea{
-    display:flex;
-    flex-direction:row;
-    margin-top:168px;
-    margin-bottom:180px;
+.askArea {
+    display: flex;
+    flex-direction: row;
+    margin-top: 168px;
+    margin-bottom: 180px;
     column-gap: 105px;
     max-width: 100%;
 }
-

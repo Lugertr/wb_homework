@@ -1,7 +1,6 @@
 <ng-container *ngFor="let links of linksArr; let i = index">
-  <mat-icon
-    class="soc_link"
-    [svgIcon]="setLogo(links.name)"
-    *ngIf="i < 10"
-  ></mat-icon>
+    <mat-icon
+        class="soc_link"
+        [svgIcon]="setLogo(links.name)"
+        *ngIf="i < 10"></mat-icon>
 </ng-container>

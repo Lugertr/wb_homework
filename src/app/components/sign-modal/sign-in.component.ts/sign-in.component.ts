@@ -10,30 +10,30 @@ import { signInForm } from 'src/app/data/InputForms';
 import { modal_social_links } from 'src/app/data/linksNames';
 
 @Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['../sign-styles.scss'],
+    selector: 'app-sign-in',
+    templateUrl: './sign-in.component.html',
+    styleUrls: ['../sign-styles.scss'],
 })
 export class DialogSignIn {
-  constructor(
-    public dialogRef: MatDialogRef<DialogSignIn>,
-    private route: ActivatedRoute,
-    private readonly router: Router
-  ) {}
+    constructor(
+        public dialogRef: MatDialogRef<DialogSignIn>,
+        private route: ActivatedRoute,
+        private readonly router: Router
+    ) {}
 
-  social_links: LinksInterface[] = modal_social_links;
-  loginForm: InputFormsInterface[] = signInForm;
+    social_links: LinksInterface[] = modal_social_links;
+    loginForm: InputFormsInterface[] = signInForm;
 
-  checkboxData: ChekboxFormsInterface = {
-    labelName: 'Keep me signed in',
-    type: 'checkbox',
-    required: false,
-  };
+    checkboxData: ChekboxFormsInterface = {
+        labelName: 'Keep me signed in',
+        type: 'checkbox',
+        required: false,
+    };
 
-  close(): void {
-    this.dialogRef.close(false);
-  }
-  switch(): void {
-    this.dialogRef.close(true);
-  }
+    close(): void {
+        this.dialogRef.close(false);
+    }
+    switch(): void {
+        this.dialogRef.close(true);
+    }
 }

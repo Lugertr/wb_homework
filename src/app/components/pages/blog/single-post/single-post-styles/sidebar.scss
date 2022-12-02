@@ -1,14 +1,18 @@
-.sideBar{
-    height: 100%;   
+@import '../../../../../styles/var';
+
+.sideBar {
+    height: 100%;
     margin-left: 78px;
     display: flex;
     flex-direction: column;
     row-gap: 60px;
     position: relative;
 
-    .input{height: 44px;}
+    .input {
+        height: 44px;
+    }
 
-    .search_input_icon{
+    .search_input_icon {
         cursor: pointer;
         color: #9A9CA5;
         position: absolute;
@@ -19,66 +23,72 @@
         height: 14px;
     }
 
-    &_panel{
+    &_panel {
         display: flex;
         flex-direction: column;
         row-gap: 24px;
 
-        &_content{
+        &_content {
             display: flex;
             flex-direction: row;
             column-gap: 20px;
             align-items: center;
 
-            .data{
+            .data {
                 display: flex;
                 flex-direction: column;
                 row-gap: 4px;
 
-                img{
+                img {
                     object-fit: cover;
                     border-radius: 4px;
                 }
-                .authorName,.authorInfo,.title{
-                    cursor: pointer;
-                &:hover{
-                    color: #FF3F3A;
-                }
-                }
-    
 
-                .authorName{
+                .authorName,
+                .authorInfo,
+                .title {
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $active-color;
+                    }
+                }
+
+
+                .authorName {
                     font-weight: 700;
                     font-size: 20px;
                     line-height: 150%
                 }
 
-                .authorInfo{
+                .authorInfo {
                     font-weight: 400;
                     font-size: 14px;
                     line-height: 150%;
                 }
 
-                .links{
+                .links {
                     column-gap: 14px;
                     margin-top: 18px;
                 }
 
-                .article_meta{
+                .article_meta {
                     color: #787A80;
-                    .meta{
+
+                    .meta {
                         font-weight: 400;
                         font-size: 14px;
                         line-height: 150%;
                     }
-                    mat-icon{
+
+                    mat-icon {
                         width: 15px;
                         height: 15px;
                         font-size: 15px;
                     }
                 }
 
-                .title{
+                .title {
                     font-weight: 700;
                     font-size: 16px;
                     line-height: 160%;
@@ -89,7 +99,7 @@
         }
     }
 
-    &_tags{
+    &_tags {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

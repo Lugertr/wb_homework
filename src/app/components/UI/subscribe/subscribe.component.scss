@@ -2,50 +2,51 @@
 @import '../../pages/pagesStyle';
 
 
-h1{
+h1 {
     font-size: 32px;
 }
 
 
-:host{
+:host {
     width: 100%;
     background-color: #F4F5F7;
     display: flex;
     flex-direction: row;
-    justify-content: center;}
+    justify-content: center;
+}
 
 
 
-    .sub_content{
-        max-width: $structureWidth;
-        display: flex;
-        flex-direction: row;
-        column-gap: 160px;
-        justify-content: space-between;
+.sub_content {
+    max-width: $structureWidth;
+    display: flex;
+    flex-direction: row;
+    column-gap: 160px;
+    justify-content: space-between;
 
-        .sub_img{
-            max-width: 454px;
-            max-height: 507px;
-            width:100%;
-            height: 100%;
-        }
-
-        .sub_form{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            row-gap: 24px;
-
-            .sub_form_send{
-                display: grid;
-                align-items: center;
-                justify-content: flex-start;
-                grid-template-columns: 2fr 1fr;
-                width: 100%;
-                column-gap: 20px;
-            }
-
-        }
+    .sub_img {
+        max-width: 454px;
+        max-height: 507px;
+        width: 100%;
+        height: 100%;
     }
+
+    .sub_form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 24px;
+
+        .sub_form_send {
+            display: grid;
+            align-items: center;
+            justify-content: flex-start;
+            grid-template-columns: 2fr 1fr;
+            width: 100%;
+            column-gap: 20px;
+        }
+
+    }
+}

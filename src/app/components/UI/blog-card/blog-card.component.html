@@ -1,45 +1,47 @@
 <mat-card class="card">
-  <div class="badge">
-    <container-element [ngSwitch]="linkName">
-      <mat-icon
-        *ngSwitchCase="'Listen'"
-        class="icon_logo material-icons-outlined"
-        svgIcon="mic"
-      ></mat-icon>
-      <mat-icon
-        *ngSwitchCase="'Watch'"
-        class="icon_logo material-icons-outlined"
-        svgIcon="play"
-      ></mat-icon>
-      <mat-icon
-        *ngSwitchDefault
-        class="icon_logo material-icons-outlined reverse"
-        >description</mat-icon
-      >
-    </container-element>
+    <div class="badge">
+        <container-element [ngSwitch]="linkName">
+            <mat-icon
+                *ngSwitchCase="'Listen'"
+                class="icon_logo material-icons-outlined"
+                svgIcon="mic"></mat-icon>
+            <mat-icon
+                *ngSwitchCase="'Watch'"
+                class="icon_logo material-icons-outlined"
+                svgIcon="play"></mat-icon>
+            <mat-icon
+                *ngSwitchDefault
+                class="icon_logo material-icons-outlined"
+                svgIcon="files"></mat-icon>
+        </container-element>
 
-    <span>{{ data.type }}</span>
-  </div>
-  <img class="img" colorful mat-card-image [src]="imgPath" [alt]="data.title" />
-  <mat-card-content class="content">
-    <div class="meta">
-      <span>{{ data.theme }}</span>
-      |
-      <span>{{ data.date }}</span>
-      <div *ngIf="data.type !== 'Article'; then timeBlock"></div>
-      <ng-template #timeBlock>
-        |
-        <span>{{ data.time }}</span>
-      </ng-template>
+        <span>{{ data.type }}</span>
     </div>
+    <img
+        class="img"
+        colorful
+        mat-card-image
+        [src]="imgPath"
+        [alt]="data.title" />
+    <mat-card-content class="content">
+        <div class="meta">
+            <span>{{ data.theme }}</span>
+            |
+            <span>{{ data.date }}</span>
+            <div *ngIf="data.type !== 'Article'; then timeBlock"></div>
+            <ng-template #timeBlock>
+                |
+                <span>{{ data.time }}</span>
+            </ng-template>
+        </div>
 
-    <mat-card-title class="title">{{ data.title }}</mat-card-title>
+        <mat-card-title class="title">{{ data.title }}</mat-card-title>
 
-    <p>{{ data.text }}</p>
+        <p>{{ data.text }}</p>
 
-    <mat-card-actions class="link">
-      <h2>{{ linkName }}</h2>
-      <mat-icon class="link_arrow">arrow_right_alt</mat-icon>
-    </mat-card-actions>
-  </mat-card-content>
+        <mat-card-actions class="link">
+            <h2>{{ linkName }}</h2>
+            <mat-icon class="link_arrow">arrow_right_alt</mat-icon>
+        </mat-card-actions>
+    </mat-card-content>
 </mat-card>

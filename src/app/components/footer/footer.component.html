@@ -1,65 +1,69 @@
 <footer class="footer">
-  <div class="footerList">
-    <img src="assets/logo/Logo_white.svg" class="logo" alt="Createx" />
-    <p class="companyInfo">
-      Createx Online School is a leader in online studying. We have lots of
-      courses and programs from the main market experts. We provide relevant
-      approaches to online learning, internships and employment in the largest
-      companies in the country.
-    </p>
-    <app-follow-links
-      class="footerLinks"
-      [linksArr]="social_networks"
-    ></app-follow-links>
-  </div>
-
-  <div class="footerList">
-    <h1>SITE MAP</h1>
-    <ul class="listEl">
-      <li *ngFor="let links of siteMapLinks" href="">{{ links.name }}</li>
-    </ul>
-  </div>
-
-  <div class="footerList">
-    <h1>COURSES</h1>
-    <ul class="listEl">
-      <li *ngFor="let links of coursesLinks" href="">{{ links.name }}</li>
-    </ul>
-  </div>
-
-  <div class="footerList">
-    <h1>CONTACT US</h1>
-    <div class="textAndSvg">
-      <mat-icon class="link" svgIcon="iphone"></mat-icon>
-      <a [href]="contactsData['tel'].href">{{ contactsData["tel"].label }}</a>
+    <div class="footerList">
+        <img src="assets/logo/Logo_white.svg" class="logo" alt="Createx" />
+        <p class="companyInfo">
+            Createx Online School is a leader in online studying. We have lots
+            of courses and programs from the main market experts. We provide
+            relevant approaches to online learning, internships and employment
+            in the largest companies in the country.
+        </p>
+        <app-follow-links
+            class="footerLinks"
+            [linksArr]="social_networks"></app-follow-links>
     </div>
-    <div class="textAndSvg">
-      <mat-icon class="link" svgIcon="mail"></mat-icon>
-      <a [href]="contactsData['email'].href">{{
-        contactsData["email"].label
-      }}</a>
-    </div>
-  </div>
 
-  <form class="footerList">
-    <h1>SIGN UP TO OUR NEWSLETTER</h1>
-    <div class="inputField">
-      <input class="footer_input" type="email" placeholder="Email address" />
-      <mat-icon class="input_arrow">arrow_right_alt</mat-icon>
+    <div class="footerList">
+        <h1>SITE MAP</h1>
+        <ul class="listEl">
+            <li *ngFor="let links of siteMapLinks" href="">{{ links.name }}</li>
+        </ul>
     </div>
-    <h6>
-      *Subscribe to our newsletter to receive communications and early updates
-      from Createx SEO Agency.
-    </h6>
-  </form>
+
+    <div class="footerList">
+        <h1>COURSES</h1>
+        <ul class="listEl">
+            <li *ngFor="let links of coursesLinks" href="">{{ links.name }}</li>
+        </ul>
+    </div>
+
+    <div class="footerList">
+        <h1>CONTACT US</h1>
+        <div class="textAndSvg">
+            <mat-icon class="link" svgIcon="iphone"></mat-icon>
+            <a [href]="contactsData['tel'].href">
+                {{ contactsData['tel'].label }}
+            </a>
+        </div>
+        <div class="textAndSvg">
+            <mat-icon class="link" svgIcon="mail"></mat-icon>
+            <a [href]="contactsData['email'].href">
+                {{ contactsData['email'].label }}
+            </a>
+        </div>
+    </div>
+
+    <form class="footerList">
+        <h1>SIGN UP TO OUR NEWSLETTER</h1>
+        <div class="inputField">
+            <input
+                class="footer_input"
+                type="email"
+                placeholder="Email address" />
+            <mat-icon class="input_arrow">arrow_right_alt</mat-icon>
+        </div>
+        <h6>
+            *Subscribe to our newsletter to receive communications and early
+            updates from Createx SEO Agency.
+        </h6>
+    </form>
 </footer>
 
 <div class="copyrightContent">
-  <div class="copyright_left">
-    <span>© All rights reserved. </span>
-    <span>Made with</span>
-    <mat-icon class="copyright_love_img" svgIcon="heart"></mat-icon>
-    <span>by Createx Studio</span>
-  </div>
-  <h2>GO TO TOP</h2>
+    <div class="copyright_left">
+        <span>© All rights reserved.</span>
+        <span>Made with</span>
+        <mat-icon class="copyright_love_img" svgIcon="heart"></mat-icon>
+        <span>by Createx Studio</span>
+    </div>
+    <h2>GO TO TOP</h2>
 </div>

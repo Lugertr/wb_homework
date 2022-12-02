@@ -1,0 +1,114 @@
+@import "../../../../styles/var";
+
+
+
+.pagToolbar {
+    width: $structureWidth;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 60px;
+
+    .tabs {
+        width: 100%;
+        position: relative;
+        display: flex;
+        column-gap: 20px;
+        align-items: stretch;
+
+        .tab {
+            padding: 12px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            column-gap: 8px;
+            color: #9A9CA5;
+
+            &:hover {
+                color: $active-color;
+            }
+
+            label,
+            mat-icon {
+                cursor: inherit;
+                color: inherit;
+            }
+
+            label {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 160%;
+            }
+
+            mat-icon {
+                font-size: 15px;
+                width: 15px;
+                height: 15px;
+            }
+
+            &_active {
+                border: 1px solid $active-color;
+                border-radius: 4px;
+                color: $active-color;
+            }
+        }
+
+        .category {
+            display: flex;
+            flex-direction: row;
+            column-gap: 12px;
+            align-items: center;
+            color: #424551;
+            position: relative;
+
+            label {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 160%;
+                white-space: nowrap;
+            }
+
+            .theme-select {
+                cursor: pointer;
+                position: relative;
+                appearance: none;
+                outline: 0;
+                background: #FFFFFF;
+                border: 1px solid #D7DADD;
+                border-radius: 4px;
+                padding: 15px 30px 15px 16px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 150%;
+
+                &_arrow {
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    right: 18px;
+                    border-right: 1px solid black;
+                    border-bottom: 1px solid black;
+                    transform: rotate(45deg)
+                }
+            }
+
+
+            .select_icon {
+                color: #424551;
+            }
+        }
+
+        .search_input_icon {
+            position: absolute;
+            cursor: pointer;
+            right: 17px;
+            top: 15px;
+
+            &:hover {
+                color: $active-color;
+            }
+        }
+    }
+}
